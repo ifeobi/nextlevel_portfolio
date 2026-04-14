@@ -20,6 +20,7 @@ import mongodb from "./tech/mongodb.png";
 import git from "./tech/git.png";
 import figma from "./tech/figma.png";
 import docker from "./tech/docker.png";
+import biggerocks from "./company/biggerocks.png";
 import onlyjewels from "./company/onlyjewels.png";
 import stripe from "./company/stripelogo.png";
 import mrparts from "./company/mrpartslogo.jpg";
@@ -32,6 +33,7 @@ import github from "./github.png";
 
 export {
   github,
+  biggerocks,
   download,
   logo,
   logo2,
