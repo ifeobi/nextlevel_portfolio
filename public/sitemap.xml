@@ -1,17 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-  Update the <loc> URLs below with your real domain once deployed.
-  e.g. replace https://yourdomain.com with https://ifeobijiofor.dev
--->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://yourdomain.com/</loc>
+    <loc>https://ifesportfolio.vercel.app/</loc>
     <lastmod>2026-04-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://yourdomain.com/ife-cv.html</loc>
+    <loc>https://ifesportfolio.vercel.app/ife-cv.html</loc>
     <lastmod>2026-04-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>

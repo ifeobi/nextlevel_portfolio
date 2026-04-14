@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
 
-# Update the Sitemap URL below once you have a deployed domain
-# Sitemap: https://yourdomain.com/sitemap.xml
+Sitemap: https://ifesportfolio.vercel.app/sitemap.xml
