@@ -42,7 +42,7 @@ const Hero = () => {
             {/* CTA buttons */}
             <div className="mt-6 flex flex-wrap gap-3">
               <a
-                href="/ife-cv.html"
+                href="/ife-cv.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 bg-[#915eff] hover:bg-[#7c3aed] text-white text-[14px] font-semibold px-5 py-2.5 rounded-lg transition-colors duration-200"
