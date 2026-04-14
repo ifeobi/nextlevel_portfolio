@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ife Obijiofor — CV</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --ink:      #0f1117;
+      --muted:    #4a5568;
+      --accent:   #5b21b6;
+      --line:     #e2e8f0;
+      --bg:       #ffffff;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 10.5pt;
+      line-height: 1.55;
+      color: var(--ink);
+      background: var(--bg);
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 48px 52px;
+    }
+
+    /* ── HEADER ── */
+    .header { margin-bottom: 24px; }
+    .header h1 {
+      font-size: 26pt;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      color: var(--ink);
+      line-height: 1.1;
+    }
+    .header .title {
+      font-size: 12pt;
+      font-weight: 500;
+      color: var(--accent);
+      margin-top: 4px;
+      letter-spacing: 0.3px;
+    }
+    .contact-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px 20px;
+      margin-top: 10px;
+      font-size: 9.5pt;
+      color: var(--muted);
+    }
+    .contact-row a {
+      color: var(--muted);
+      text-decoration: none;
+    }
+    .contact-row a:hover { color: var(--accent); }
+    .contact-row span::before {
+      content: '';
+      display: inline-block;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--accent);
+      margin-right: 7px;
+      vertical-align: middle;
+      position: relative;
+      top: -1px;
+    }
+
+    hr.divider {
+      border: none;
+      border-top: 1.5px solid var(--line);
+      margin: 18px 0;
+    }
+
+    /* ── SECTIONS ── */
+    section { margin-bottom: 22px; }
+    section:last-child { margin-bottom: 0; }
+
+    .section-title {
+      font-size: 8.5pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.4px;
+      color: var(--accent);
+      border-bottom: 1.5px solid var(--accent);
+      padding-bottom: 4px;
+      margin-bottom: 14px;
+    }
+
+    /* ── SUMMARY ── */
+    .summary p {
+      color: var(--muted);
+      font-size: 10.5pt;
+      line-height: 1.65;
+    }
+
+    /* ── SKILLS ── */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 110px 1fr;
+      gap: 5px 14px;
+    }
+    .skill-label {
+      font-weight: 600;
+      font-size: 9.5pt;
+      color: var(--ink);
+      padding-top: 1px;
+    }
+    .skill-value {
+      font-size: 9.5pt;
+      color: var(--muted);
+    }
+
+    /* ── EXPERIENCE ── */
+    .job { margin-bottom: 18px; page-break-inside: avoid; }
+    .job:last-child { margin-bottom: 0; }
+
+    .job-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .job-title {
+      font-size: 11pt;
+      font-weight: 700;
+      color: var(--ink);
+    }
+    .job-date {
+      font-size: 9pt;
+      color: var(--muted);
+      white-space: nowrap;
+      font-weight: 500;
+    }
+    .job-company {
+      font-size: 9.5pt;
+      color: var(--accent);
+      font-weight: 500;
+      margin-top: 1px;
+      margin-bottom: 7px;
+    }
+    .job-company a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    .job ul {
+      padding-left: 16px;
+    }
+    .job ul li {
+      font-size: 9.5pt;
+      color: var(--muted);
+      margin-bottom: 4px;
+      line-height: 1.55;
+    }
+    .job ul li strong {
+      color: var(--ink);
+      font-weight: 600;
+    }
+
+    /* ── EDUCATION ── */
+    .edu-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 6px;
+      page-break-inside: avoid;
+    }
+    .edu-left {}
+    .edu-degree {
+      font-size: 10pt;
+      font-weight: 600;
+      color: var(--ink);
+    }
+    .edu-school {
+      font-size: 9.5pt;
+      color: var(--muted);
+    }
+    .edu-year {
+      font-size: 9pt;
+      color: var(--muted);
+      white-space: nowrap;
+    }
+
+    /* ── TRANSITION NOTE ── */
+    .note {
+      background: #f8f5ff;
+      border-left: 3px solid var(--accent);
+      padding: 10px 14px;
+      border-radius: 0 4px 4px 0;
+      font-size: 9.5pt;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    /* ── PRINT ── */
+    @media print {
+      @page { size: A4; margin: 15mm 18mm; }
+      body { padding: 0; font-size: 10pt; }
+      .note { background: #f8f5ff !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      a { color: inherit !important; }
+      .section-title { color: var(--accent) !important; border-color: var(--accent) !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .job-company, .job-company a { color: var(--accent) !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .header .title { color: var(--accent) !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <div class="header">
+    <h1>Ife Obijiofor</h1>
+    <div class="title">Senior Fullstack Engineer &nbsp;·&nbsp; AI Integration &nbsp;·&nbsp; SaaS Architecture</div>
+    <div class="contact-row">
+      <span><a href="mailto:ifeobijiofor1@gmail.com">ifeobijiofor1@gmail.com</a></span>
+      <span><a href="https://wa.me/2347088366937">+234 708 836 6937</a></span>
+      <span>Abuja, Nigeria &mdash; Remote</span>
+      <span><a href="https://www.linkedin.com/in/ifechukwu-obijiofor-761040109/" target="_blank">linkedin.com/in/ifechukwu-obijiofor-761040109</a></span>
+      <span><a href="https://github.com/ifeobi" target="_blank">github.com/ifeobi</a></span>
+    </div>
+  </div>
+
+  <hr class="divider" />
+
+  <!-- SUMMARY -->
+  <section class="summary">
+    <div class="section-title">Professional Summary</div>
+    <p>
+      Former practising lawyer turned senior fullstack engineer with 5+ years of professional engineering experience (2022&ndash;present).
+      Specialises in full-stack TypeScript SaaS architecture, backend system design, and enterprise AI integration.
+      Currently the sole engineer at <strong>Biggerocks BV</strong> (Antwerp, Belgium), where I architected and maintain
+      <strong>Sprks</strong> &mdash; a production ERP for the diamond trading and atelier jewellery industry, featuring a
+      an internal Copilot (powered by the Claude API) with 38+ tools and an AI document import pipeline.
+      Legal training informs a precision-first approach to system design, documentation, and technical communication
+      that sets my engineering work apart.
+    </p>
+  </section>
+
+  <!-- SKILLS -->
+  <section>
+    <div class="section-title">Technical Skills</div>
+    <div class="skills-grid">
+      <span class="skill-label">Languages</span>
+      <span class="skill-value">TypeScript, JavaScript</span>
+
+      <span class="skill-label">Frontend</span>
+      <span class="skill-value">React.js, Next.js, Redux Toolkit, MUI, Tailwind CSS, Framer Motion, Three.js</span>
+
+      <span class="skill-label">Backend</span>
+      <span class="skill-value">NestJS, Node.js, Prisma ORM, REST APIs, WebSockets, BullMQ</span>
+
+      <span class="skill-label">Databases</span>
+      <span class="skill-value">PostgreSQL, MongoDB</span>
+
+      <span class="skill-label">Cloud &amp; DevOps</span>
+      <span class="skill-value">AWS (Lightsail, S3), Vercel, Docker, Git / GitHub</span>
+
+      <span class="skill-label">AI &amp; LLM</span>
+      <span class="skill-value">Claude (Anthropic SDK), OpenAI (GPT-4o Vision, Responses API), tool-use patterns, streaming SSE</span>
+
+      <span class="skill-label">Tools</span>
+      <span class="skill-value">Figma, Postman, Shopify, EmailJS</span>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section>
+    <div class="section-title">Work Experience</div>
+
+    <div class="job">
+      <div class="job-header">
+        <span class="job-title">Senior Fullstack Engineer</span>
+        <span class="job-date">Feb 2024 &ndash; Present</span>
+      </div>
+      <div class="job-company"><a href="https://sprks.net" target="_blank">Biggerocks BV &mdash; Antwerp, Belgium (Remote)</a></div>
+      <ul>
+        <li>Architected and built <strong>Sprks</strong> &mdash; a production-grade SaaS ERP for the diamond trading and atelier jewellery industry, covering inventory, accounting, production, CRM, and document management across two modules: <em>Carats</em> (diamond trading) and <em>Jewels</em> (atelier production).</li>
+        <li>Engineered a <strong>dual AI system</strong>: an intelligent document import pipeline that extracts and structures data from PDFs, images, and Excel files into ERP records; and an internal <strong>Copilot</strong> (powered by the Claude API) with <strong>38+ tools</strong> that mirrors every manual action in the platform &mdash; executing batch operations in the background and giving staff complete natural-language control over the entire system.</li>
+        <li>Built the <strong>Desk module</strong> &mdash; a unified multi-channel CRM inbox (WhatsApp, IONOS email, Trengo) with AI ticket classification, auto-routing, a 6-stage Kanban pipeline, real-time WebSocket gateway, and cross-module sub-ticket linking between Carats and Jewels.</li>
+        <li>Designed an <strong>automated interest and debt recovery system</strong> &mdash; calculated accrued interest on overdue client balances, dispatched proactive payment warnings, and generated per-contact accounting reports &mdash; directly contributing to <strong>over $2M in recovered receivables</strong>.</li>
+        <li>Integrated live <strong>Rapaport diamond pricing</strong>, GIA/HRD/IGI certificate auto-fill, ZPL label printing for Zebra printers, BullMQ background workers, and role-based access control across multi-company and legal entity structures.</li>
+        <li>Sole engineer on a full TypeScript codebase &mdash; <strong>NestJS + Prisma + PostgreSQL</strong> API and <strong>Next.js + Redux + MUI</strong> frontend &mdash; 1,100+ files shipped and maintained end-to-end.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-header">
+        <span class="job-title">Fullstack Developer</span>
+        <span class="job-date">Sept 2023 &ndash; Feb 2024</span>
+      </div>
+      <div class="job-company"><a href="https://onlyjewels.com" target="_blank">OnlyJewels BV &mdash; Antwerp, Belgium (Remote)</a></div>
+      <ul>
+        <li>Architected and launched OnlyJewels' e-commerce platform and admin portal, <strong>cutting page load time from 120s to under 3s</strong> via SSR optimisation, lazy loading, and image CDN strategies.</li>
+        <li>Implemented advanced SEO (structured data, dynamic sitemaps, meta optimisation), significantly improving Google rankings in the Belgian luxury jewellery market.</li>
+        <li>Engineered a cost-effective hybrid infrastructure using Vercel, AWS Lightsail, and headless WordPress.</li>
+        <li>Built integrations between product catalogue management, Stripe payment processing, and real-time inventory tracking.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-header">
+        <span class="job-title">Frontend Developer</span>
+        <span class="job-date">Jan 2022 &ndash; Sept 2023</span>
+      </div>
+      <div class="job-company">Stripe-Tec</div>
+      <ul>
+        <li>Developed and maintained multiple client-facing web applications using React.js, TypeScript, and modern CSS frameworks.</li>
+        <li>Shipped responsive, accessible UIs in close collaboration with designers, product managers, and backend engineers on tight deadlines.</li>
+        <li>Led code reviews and championed performance and accessibility standards across projects.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-header">
+        <span class="job-title">Shopify Developer</span>
+        <span class="job-date">June 2023 &ndash; Dec 2023</span>
+      </div>
+      <div class="job-company"><a href="https://zamandzom.com" target="_blank">Zam&amp;Zom LLC</a></div>
+      <ul>
+        <li>Delivered a fully custom Shopify e-commerce store with theme development, payment gateway integration, inventory management, and SEO configuration.</li>
+        <li>Ensured cross-browser compatibility and mobile-first responsiveness post-launch.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section>
+    <div class="section-title">Education</div>
+    <div class="edu-item">
+      <div class="edu-left">
+        <div class="edu-degree">BL &mdash; Barrister-at-Law</div>
+        <div class="edu-school">Nigerian Law School, Abuja</div>
+      </div>
+      <div class="edu-year">2017</div>
+    </div>
+    <div class="edu-item">
+      <div class="edu-left">
+        <div class="edu-degree">LL.B (Hons)</div>
+        <div class="edu-school">University of Nigeria, Enugu Campus</div>
+      </div>
+      <div class="edu-year">2016</div>
+    </div>
+  </section>
+
+  <!-- TRANSITION NOTE -->
+  <section>
+    <div class="section-title">Career Background</div>
+    <div class="note">
+      Practised as a corporate and commercial lawyer (2017&ndash;2022) before transitioning fully into software engineering in 2022.
+      Legal training &mdash; analytical precision, structured reasoning, and clear documentation &mdash; directly shapes how I approach
+      system architecture, API design, and technical communication. The transition was deliberate: software became the more powerful
+      tool for solving the kinds of complex, structured problems I was trained to work on.
+    </div>
+  </section>
+
+</body>
+</html>

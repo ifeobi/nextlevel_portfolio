@@ -2,6 +2,7 @@ import {
   VerticalTimeline,
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
+import type { Experience as ExperienceType } from "../types";
 import { motion } from "framer-motion";
 
 import "react-vertical-timeline-component/style.min.css";
@@ -13,7 +14,7 @@ import { experiences } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { textVariant } from "../utils/motion";
 
-const ExperienceCard = ({ experience }) => {
+const ExperienceCard = ({ experience }: { experience: ExperienceType }) => {
   return (
     <VerticalTimelineElement
       contentStyle={{ background: "#1d1836", color: "#fff" }}
@@ -36,7 +37,18 @@ const ExperienceCard = ({ experience }) => {
           className="text-secondary text-[16px] font-semibold"
           style={{ margin: 0 }}
         >
-          {experience.company_name}
+          {experience.company_url ? (
+            <a
+              href={experience.company_url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-white transition-colors duration-200 underline underline-offset-2 decoration-dotted"
+            >
+              {experience.company_name}
+            </a>
+          ) : (
+            experience.company_name
+          )}
         </p>
       </div>
 
