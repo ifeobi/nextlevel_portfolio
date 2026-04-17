@@ -6,6 +6,7 @@ import { styles } from "../styles";
 import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
+import { trackEvent } from "../utils/analytics";
 
 const Contact = () => {
   const formRef = useRef<HTMLFormElement>(null);
@@ -42,6 +43,7 @@ const Contact = () => {
       .then(
         () => {
           setLoading(false);
+          trackEvent("contact_form_submit", { event_category: "engagement" });
           alert("Thank you. I will get back to you shortly!");
 
           setForm({

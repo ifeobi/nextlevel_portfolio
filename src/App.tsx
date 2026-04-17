@@ -11,6 +11,7 @@ import {
 } from "./components";
 import CookieConsent from "./components/CookieConsent";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
+import { trackEvent } from "./utils/analytics";
 
 const WHATSAPP_URL = "https://wa.me/2347088366937";
 
@@ -31,6 +32,7 @@ const WhatsAppButton = () => (
     href={WHATSAPP_URL}
     target="_blank"
     rel="noopener noreferrer"
+    onClick={() => trackEvent("whatsapp_click", { event_category: "engagement" })}
     className="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full flex items-center justify-center shadow-lg transition-transform duration-200 hover:scale-110"
     style={{ backgroundColor: "#25D366" }}
     title="Chat with me on WhatsApp"
