@@ -11,7 +11,6 @@ import {
 } from "./components";
 
 const StarsCanvas = lazy(() => import("./components/canvas/Stars"));
-import CookieConsent from "./components/CookieConsent";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import { trackEvent } from "./utils/analytics";
 
@@ -77,7 +76,6 @@ const App = () => {
         />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
       </Routes>
-      <CookieConsent />
     </BrowserRouter>
   );
 };

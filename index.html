@@ -29,21 +29,11 @@
     <!-- Theme colour (browser chrome on mobile) -->
     <meta name="theme-color" content="#050816" />
 
-    <!-- Google Consent Mode v2: set defaults BEFORE loading gtag -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5BVWJML3HE"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
-      gtag('consent', 'default', {
-        analytics_storage: 'denied',
-        ad_storage: 'denied',
-        ad_user_data: 'denied',
-        ad_personalization: 'denied'
-      });
-    </script>
-
-    <!-- Google tag (gtag.js) — monitoring always loads, tracking waits for consent -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5BVWJML3HE"></script>
-    <script>
       gtag('js', new Date());
       gtag('config', 'G-5BVWJML3HE');
     </script>
