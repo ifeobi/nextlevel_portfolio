@@ -64,7 +64,7 @@ const App = () => {
                 <Tech />
                 <Works />
               </div>
-              <div className="relative z-[-1]">
+              <div className="relative">
                 <Contact />
                 <Suspense fallback={null}>
                   <StarsCanvas />
