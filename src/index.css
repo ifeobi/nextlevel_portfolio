@@ -114,6 +114,16 @@
   -webkit-text-fill-color: transparent;
 }
 
+/* Hero overlay — pass all events through to the 3D canvas beneath */
+.hero-overlay,
+.hero-overlay * {
+  pointer-events: none;
+}
+.hero-overlay .hero-interactive,
+.hero-overlay .hero-interactive * {
+  pointer-events: auto;
+}
+
 /* canvas- styles */
 .canvas-loader {
   font-size: 10px;

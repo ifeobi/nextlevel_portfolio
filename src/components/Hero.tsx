@@ -1,10 +1,8 @@
-import { lazy, Suspense } from "react";
 import { motion } from "framer-motion";
 
 import { styles } from "../styles";
+import { ComputersCanvas } from "./canvas";
 import { download } from "../assets";
-
-const ComputersCanvas = lazy(() => import("./canvas/Computers"));
 
 const LINKEDIN_URL = "https://www.linkedin.com/in/ifechukwu-obijiofor-761040109/";
 const PROFILE_IMG = "https://ik.imagekit.io/sco75u7ale/ife%20from%20chatgpt.png";
@@ -13,7 +11,7 @@ const Hero = () => {
   return (
     <section className="relative w-full h-screen mx-auto">
       <div
-        className={`${styles.paddingX} absolute inset-0 top-[120px] max-w-7xl mx-auto flex items-start gap-5 z-10`}
+        className={`${styles.paddingX} hero-overlay absolute top-[120px] left-0 right-0 max-w-7xl mx-auto flex items-start gap-5 z-10`}
       >
         {/* accent line */}
         <div className="flex flex-col justify-center items-center mt-5">
@@ -41,8 +39,8 @@ const Hero = () => {
               systems, and full-stack web applications.
             </p>
 
-            {/* CTA buttons */}
-            <div className="mt-6 flex flex-wrap gap-3">
+            {/* CTA buttons — interactive */}
+            <div className="hero-interactive mt-6 flex flex-wrap gap-3">
               <a
                 href="/ife-cv.pdf"
                 target="_blank"
@@ -63,8 +61,8 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* profile picture */}
-          <div className="hidden sm:block flex-shrink-0">
+          {/* profile picture — interactive */}
+          <div className="hero-interactive hidden sm:block flex-shrink-0">
             <div className="w-[130px] h-[130px] rounded-full border-2 border-[#915eff] overflow-hidden shadow-lg shadow-[#915eff33]">
               <img
                 src={PROFILE_IMG}
@@ -76,12 +74,10 @@ const Hero = () => {
         </div>
       </div>
 
-      <Suspense fallback={null}>
-        <ComputersCanvas />
-      </Suspense>
+      <ComputersCanvas />
 
       {/* scroll indicator */}
-      <div className="absolute xs:bottom-0 bottom-32 w-full flex justify-center items-center">
+      <div className="absolute xs:bottom-0 bottom-32 w-full flex justify-center items-center pointer-events-auto">
         <a href="#about">
           <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
             <motion.div
