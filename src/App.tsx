@@ -1,5 +1,6 @@
 import { lazy, Suspense } from "react";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { Analytics } from "@vercel/analytics/react";
 import {
   About,
   Contact,
@@ -77,6 +78,7 @@ const App = () => {
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
       </Routes>
     </BrowserRouter>
+    <Analytics />
   );
 };
 
