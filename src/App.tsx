@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import {
   About,
   Contact,
@@ -13,6 +13,18 @@ import CookieConsent from "./components/CookieConsent";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 
 const WHATSAPP_URL = "https://wa.me/2347088366937";
+
+const Footer = () => (
+  <footer className="w-full py-4 px-6 flex justify-center items-center gap-6 border-t border-[#1a1a4a]" style={{ backgroundColor: "#050816" }}>
+    <p className="text-[#aaa6c3] text-[12px]">
+      © {new Date().getFullYear()} Ife Obijiofor
+    </p>
+    <span className="text-[#2a2a6a]">·</span>
+    <Link to="/privacy-policy" className="text-[#aaa6c3] text-[12px] hover:text-[#915eff] transition-colors">
+      Privacy Policy
+    </Link>
+  </footer>
+);
 
 const WhatsAppButton = () => (
   <a
@@ -52,6 +64,7 @@ const App = () => {
                 <Contact />
                 <StarsCanvas />
               </div>
+              <Footer />
               <WhatsAppButton />
             </>
           }
