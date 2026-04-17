@@ -1,3 +1,4 @@
+import { lazy, Suspense } from "react";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import {
   About,
@@ -7,8 +8,9 @@ import {
   Navbar,
   Tech,
   Works,
-  StarsCanvas,
 } from "./components";
+
+const StarsCanvas = lazy(() => import("./components/canvas/Stars"));
 import CookieConsent from "./components/CookieConsent";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import { trackEvent } from "./utils/analytics";
@@ -64,7 +66,9 @@ const App = () => {
               </div>
               <div className="relative z-[-1]">
                 <Contact />
-                <StarsCanvas />
+                <Suspense fallback={null}>
+                  <StarsCanvas />
+                </Suspense>
               </div>
               <Footer />
               <WhatsAppButton />

@@ -2,11 +2,13 @@ import React, { useState, useRef } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 
+import { lazy, Suspense } from "react";
 import { styles } from "../styles";
-import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
 import { trackEvent } from "../utils/analytics";
+
+const EarthCanvas = lazy(() => import("./canvas/Earth"));
 
 const Contact = () => {
   const formRef = useRef<HTMLFormElement>(null);
@@ -121,7 +123,9 @@ const Contact = () => {
         variants={slideIn("right", "tween", 0.2, 1)}
         className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]"
       >
-        <EarthCanvas />
+        <Suspense fallback={null}>
+          <EarthCanvas />
+        </Suspense>
       </motion.div>
     </div>
   );
