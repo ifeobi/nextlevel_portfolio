@@ -48,6 +48,7 @@ const WhatsAppButton = () => (
 
 const App = () => {
   return (
+    <>
     <BrowserRouter>
       <Routes>
         <Route
@@ -79,6 +80,7 @@ const App = () => {
       </Routes>
     </BrowserRouter>
     <Analytics />
+    </>
   );
 };
 
