@@ -81,7 +81,7 @@ const experiences: Experience[] = [
   {
     title: "Fullstack Developer",
     company_name: "OnlyJewels BV — Antwerp, Belgium",
-    company_url: "https://onlyjewels.com",
+    company_url: "https://www.onlyjewels.com",
     icon: onlyjewels,
     iconBg: "#E6DEDD",
     date: "Sept 2023 - Feb 2024",
@@ -200,7 +200,7 @@ const projects: Project[] = [
     ],
     image: "https://ik.imagekit.io/ifeobi/details.0_pAhQg5Qq5e.webp",
     source_code_link: "#",
-    live_site: "https://onlyjewels.com",
+    live_site: "https://www.onlyjewels.com",
   },
 ];
 
