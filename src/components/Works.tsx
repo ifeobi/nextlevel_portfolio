@@ -9,6 +9,21 @@ import type { Project } from "../types";
 
 const GITHUB_PROFILE = "https://github.com/ifeobi";
 
+const chapters = [
+  {
+    label: "I — The Belgian Chapter",
+    projects: projects.slice(0, 2), // Sprks, OnlyJewels
+  },
+  {
+    label: "II — Crossing the Atlantic",
+    projects: projects.slice(2, 4), // U&U Designs, TSH Living
+  },
+  {
+    label: "III — Building His Own",
+    projects: projects.slice(4),    // Munai
+  },
+];
+
 // External link icon SVG
 const ExternalLinkIcon = () => (
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.5}
@@ -19,8 +34,6 @@ const ExternalLinkIcon = () => (
   </svg>
 );
 
-type ProjectCardProps = Project & { index: number };
-
 const LockIcon = () => (
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}
     strokeLinecap="round" strokeLinejoin="round" className="w-3.5 h-3.5 text-[#915eff]">
@@ -28,6 +41,8 @@ const LockIcon = () => (
     <path d="M7 11V7a5 5 0 0 1 10 0v4" />
   </svg>
 );
+
+type ProjectCardProps = Project & { index: number };
 
 const ProjectCard = ({
   index,
@@ -44,7 +59,7 @@ const ProjectCard = ({
 
   return (
     <motion.div
-      variants={fadeIn("up", "spring", index * 0.5, 0.75)}
+      variants={fadeIn("up", "spring", index * 0.3, 0.75)}
       className="h-full"
     >
       <Tilt
@@ -94,7 +109,7 @@ const ProjectCard = ({
           )}
         </div>
 
-        {/* content — flex-1 so all cards stretch to same height */}
+        {/* content */}
         <div className="mt-4 flex-1 flex flex-col">
           <div className="flex items-start justify-between gap-2">
             <h3 className="text-white font-bold text-[20px] leading-tight">{name}</h3>
@@ -125,12 +140,25 @@ const ProjectCard = ({
   );
 };
 
+const ChapterDivider = ({ label, index }: { label: string; index: number }) => (
+  <motion.div
+    variants={fadeIn("", "", index * 0.2, 0.6)}
+    className="flex items-center gap-4 mt-16 mb-8"
+  >
+    <div className="flex-1 h-px bg-[#915eff]/20" />
+    <span className="text-[#915eff] text-[12px] font-semibold tracking-[0.2em] uppercase whitespace-nowrap">
+      {label}
+    </span>
+    <div className="flex-1 h-px bg-[#915eff]/20" />
+  </motion.div>
+);
+
 const Works = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
         <p className={`${styles.sectionSubText}`}>My work</p>
-        <h2 className={`${styles.sectionHeadText}`}>Projects.</h2>
+        <h2 className={`${styles.sectionHeadText}`}>The story in code.</h2>
       </motion.div>
 
       <div className="w-full flex">
@@ -138,23 +166,35 @@ const Works = () => {
           variants={fadeIn("", "", 0.1, 1)}
           className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]"
         >
-          A selection of projects that reflect how I work — from enterprise SaaS
-          platforms with embedded AI, to polished consumer products. Each one is
-          live, in production, and solving a real business problem.
+          Every project below is live, in production, and part of a bigger story.
+          Each chapter brought a different brief, a different continent, and a
+          different problem to solve.
         </motion.p>
       </div>
 
-      {/* equal-height grid */}
-      <div className="mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7 items-stretch">
-        {projects.map((project, index) => (
-          <ProjectCard key={`project-${index}`} index={index} {...project} />
-        ))}
-      </div>
+      {chapters.map((chapter, chapterIndex) => (
+        <div key={chapter.label}>
+          <ChapterDivider label={chapter.label} index={chapterIndex} />
+          <div className={`grid grid-cols-1 gap-7 items-stretch ${
+            chapter.projects.length === 1
+              ? "sm:grid-cols-1 max-w-lg mx-auto"
+              : "sm:grid-cols-2"
+          }`}>
+            {chapter.projects.map((project, projectIndex) => (
+              <ProjectCard
+                key={project.name}
+                index={chapterIndex * 2 + projectIndex}
+                {...project}
+              />
+            ))}
+          </div>
+        </div>
+      ))}
 
-      {/* See more → GitHub */}
+      {/* GitHub CTA */}
       <motion.div
         variants={fadeIn("up", "spring", 0.5, 0.75)}
-        className="mt-10 flex justify-center"
+        className="mt-14 flex justify-center"
       >
         <a
           href={GITHUB_PROFILE}
