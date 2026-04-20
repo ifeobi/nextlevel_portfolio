@@ -162,22 +162,9 @@ const testimonials: Testimonial[] = [
 
 const projects: Project[] = [
   {
-    name: "Munai",
-    description:
-      "AI audio platform for creators who are tired of robotic voice tools. Speech-to-text in seconds, natural-sounding text-to-audio, and a voice cloning engine in development. Built on Next.js + TypeScript — evolving into a full creative AI hub for content production.",
-    tags: [
-      { name: "Next.js", color: "blue-text-gradient" },
-      { name: "TypeScript", color: "blue-text-gradient" },
-      { name: "Tailwind CSS", color: "green-text-gradient" },
-    ],
-    image: "https://ik.imagekit.io/sco75u7ale/Screenshot%202026-04-14%20005408.png",
-    source_code_link: "#",
-    live_site: "https://munai.dev",
-  },
-  {
     name: "Sprks — Diamond & Atelier ERP",
     description:
-      "Enterprise ERP for a Belgian diamond trading and atelier jewellery business — built solo. Covers inventory, accounting, production, and CRM, with an AI document import pipeline and a Claude-powered Copilot with 38+ tools for natural-language platform control. Automated debt recovery contributed to $2M+ in recovered receivables.",
+      "The system that changed everything. A Belgian diamond merchant needed his entire business in code — inventory, accounting, AI document processing, and a multi-channel CRM. Built solo: 1,100+ TypeScript files, a Claude-powered AI Copilot with 38+ tools, and an automated debt recovery system that contributed to $2M+ in recovered receivables.",
     tags: [
       { name: "NestJS", color: "blue-text-gradient" },
       { name: "Next.js", color: "blue-text-gradient" },
@@ -186,12 +173,13 @@ const projects: Project[] = [
     ],
     image: "https://ik.imagekit.io/sco75u7ale/Screenshot%202026-04-14%20004507.png",
     source_code_link: "#",
-    live_site: "https://sprks.net",
+    live_site: "#",
+    isPrivate: true,
   },
   {
-    name: "OnlyJewels e-store",
+    name: "OnlyJewels — Luxury E-Commerce",
     description:
-      "Antwerp's premium jewellery e-commerce store had a 120-second page load. Rebuilt end-to-end: Next.js SSR, image CDN, real-time inventory, Stripe payments, and advanced structured-data SEO. Load time cut to under 3 seconds.",
+      "Same orbit, different brief. After Sprks, the next call came from the same Belgian circle — a luxury jewellery brand with a 120-second page load bleeding customers. Rebuilt end-to-end: Next.js SSR, image CDN, Stripe, real-time inventory, and structured-data SEO. Load time cut to under 3 seconds.",
     tags: [
       { name: "Next.js", color: "blue-text-gradient" },
       { name: "NestJS", color: "blue-text-gradient" },
@@ -201,6 +189,48 @@ const projects: Project[] = [
     image: "https://ik.imagekit.io/ifeobi/details.0_pAhQg5Qq5e.webp",
     source_code_link: "#",
     live_site: "https://www.onlyjewels.com",
+  },
+  {
+    name: "U&U Designs — Event Planning",
+    description:
+      "Word crossed the Atlantic. A US-based event planning company needed a digital presence that matched the standard of their events — polished, fast, and built to convert. Delivered end-to-end.",
+    tags: [
+      { name: "Next.js", color: "blue-text-gradient" },
+      { name: "TypeScript", color: "blue-text-gradient" },
+      { name: "Tailwind CSS", color: "green-text-gradient" },
+    ],
+    // TODO: upload screenshot to ImageKit and replace this URL
+    image: "https://placehold.co/600x400/1a1a2e/aaa6c3?text=U%26U+Designs",
+    source_code_link: "#",
+    live_site: "https://uandudesigns.com",
+  },
+  {
+    name: "TSH Living — Construction Co.",
+    description:
+      "A construction entrepreneur wanted something specific — a site so well-built he could hand it off and never call me again. Dynamic content management, a full admin portal, and a public-facing site he can update without a developer. Built to outlast my involvement.",
+    tags: [
+      { name: "Next.js", color: "blue-text-gradient" },
+      { name: "NestJS", color: "blue-text-gradient" },
+      { name: "PostgreSQL", color: "green-text-gradient" },
+    ],
+    // TODO: upload screenshot to ImageKit and replace this URL
+    image: "https://placehold.co/600x400/1a1a2e/aaa6c3?text=TSH+Living",
+    source_code_link: "#",
+    live_site: "https://tshliving-fetest.vercel.app",
+  },
+  {
+    name: "Munai — AI Creative Studio",
+    description:
+      "What I build when there is no client brief. An AI creative studio I started because the tools I needed did not exist yet — transcription, live captioning, voice cloning, and a full AI image and video generation suite for content makers.",
+    tags: [
+      { name: "Next.js", color: "blue-text-gradient" },
+      { name: "NestJS", color: "blue-text-gradient" },
+      { name: "Fish Audio", color: "green-text-gradient" },
+      { name: "PostgreSQL", color: "pink-text-gradient" },
+    ],
+    image: "https://ik.imagekit.io/sco75u7ale/Screenshot%202026-04-14%20005408.png",
+    source_code_link: "#",
+    live_site: "https://munai.dev",
   },
 ];
 

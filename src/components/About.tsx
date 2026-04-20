@@ -40,24 +40,32 @@ const About = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionSubText}`}>A bit about me</p>
-        <h2 className={`${styles.sectionHeadText}`}>I own the product end-to-end.</h2>
+        <p className={`${styles.sectionSubText}`}>The story so far</p>
+        <h2 className={`${styles.sectionHeadText}`}>From Lagos courtrooms to Belgian boardrooms.</h2>
       </motion.div>
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
         className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
       >
-        I transitioned from law into software engineering in 2022 and have not looked
-        back since. Today I am the sole engineer behind Sprks — an enterprise ERP for
-        a Belgian diamond trading and atelier jewellery business — covering inventory,
-        accounting, AI document processing, and a real-time multi-channel CRM. I
-        architected and shipped 1,100+ TypeScript files: a NestJS + PostgreSQL API, a
-        Next.js frontend, and an internal AI Copilot (powered by Claude) with 38+ tools
-        that gives staff natural-language control over the platform. The automated debt
-        recovery system I built contributed to over $2M in recovered receivables. My
-        legal background gives me a precision for systems thinking and edge cases that
-        I carry into every codebase. If you need someone who can own a product
-        end-to-end and ship things that actually work — let's talk.
+        In 2022 I walked away from a law career in Nigeria and taught myself to code.
+        What happened next I could not have planned.
+        <br /><br />
+        Within two years I was the sole engineer behind the entire digital
+        infrastructure of a Belgian diamond merchant's business — an enterprise ERP
+        covering inventory, accounting, AI document processing, and a real-time
+        multi-channel CRM. The automated debt recovery system I built contributed to
+        over $2M in recovered receivables.
+        <br /><br />
+        When you deliver at that level, word travels without you asking. The merchant's
+        circle became clients. Then businesses in the United States found me — an event
+        planning company, a construction entrepreneur who wanted a site so well-built
+        he could hand it off and never call me again.
+        <br /><br />
+        In the space between client work, I am building Munai — an AI creative studio
+        I started because the tools I needed did not exist yet.
+        <br /><br />
+        From a lawyer whose practice ended at Nigeria's borders, to an engineer whose
+        work doesn't.
       </motion.p>
 
       <div className="mt-20 flex flex-wrap gap-10">
