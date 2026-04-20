@@ -52,6 +52,8 @@ const ComputersCanvas = () => {
     };
   }, []);
 
+  if (isMobile) return null;
+
   return (
     <Canvas
       frameloop="always"
@@ -63,7 +65,6 @@ const ComputersCanvas = () => {
         <OrbitControls
           makeDefault
           enableZoom={false}
-          enabled={!isMobile}
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}
         />
