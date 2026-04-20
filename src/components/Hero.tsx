@@ -71,6 +71,12 @@ const Hero = () => {
                 <img src={download} alt="download" className="w-4 h-4 object-contain invert" />
                 Download CV
               </a>
+              <button
+                onClick={() => (window as any).Calendly?.initPopupWidget({ url: 'https://calendly.com/ifeobijiofor1/30min' })}
+                className="flex items-center gap-2 bg-white text-[#915eff] hover:bg-[#f3f0ff] text-[14px] font-semibold px-5 py-2.5 rounded-lg transition-colors duration-200"
+              >
+                Book a call
+              </button>
               <a
                 href="#about"
                 className="flex items-center gap-2 border border-[#915eff] text-[#915eff] hover:bg-[#915eff] hover:text-white text-[14px] font-semibold px-5 py-2.5 rounded-lg transition-colors duration-200"
