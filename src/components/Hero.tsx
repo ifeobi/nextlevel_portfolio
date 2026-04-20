@@ -42,9 +42,9 @@ const Hero = () => {
         <div className="flex-1 min-w-0 flex flex-col lg:flex-row lg:items-start lg:justify-between gap-8">
           <div className="min-w-0">
             <div className="flex items-center gap-2 mb-3">
-              <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-              <span className="text-green-400 text-[13px] font-medium tracking-wide">
-                Open to the right remote role
+              <span className="w-2 h-2 rounded-full bg-[#915eff] animate-pulse" />
+              <span className="text-[#915eff] text-[13px] font-medium tracking-wide">
+                The AI age is here — is your business actually in it?
               </span>
             </div>
 
@@ -52,14 +52,22 @@ const Hero = () => {
               id="hero-heading"
               className={`${styles.heroHeadText} lg:text-[72px] sm:text-[54px] xs:text-[46px] text-[36px]`}
             >
-              Hi, I'm <span className="text-[#915eff]">Ife</span> —
+              Every competitor
               <br className="hidden sm:block" />
-              I build AI systems that move the needle.
+              is <span className="text-[#915eff]">automating.</span>
+              <br />
+              Your business still
+              <br className="hidden sm:block" />
+              runs on gut feel.
             </h1>
             <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-              Senior Fullstack Engineer specialising in TypeScript SaaS{" "}
-              <br className="hidden sm:block" />
-              and AI integration. My last system contributed to $2M+ in recovered receivables.
+              I'm Ife — I build the systems that change that. AI pipelines, full SaaS,
+              revenue recovery tools. My last system contributed to{" "}
+              <span className="text-white font-semibold">$2M+ in recovered receivables.</span>{" "}
+              I work like I have a stake in the outcome, because I treat every business I touch like it's my own.
+            </p>
+            <p className="mt-3 text-[13px] text-[#aaa6c3] font-medium">
+              Not another remote dev who goes quiet after onboarding.
             </p>
 
             <div className="mt-6 flex flex-wrap gap-3">
