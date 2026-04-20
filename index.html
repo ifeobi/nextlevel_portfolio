@@ -30,6 +30,22 @@
     <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
     <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
     <script type="text/javascript">
+      window.addEventListener('message', function(e) {
+        if (!e.data || !e.data.event) return;
+        if (e.data.event === 'calendly.event_type_viewed') {
+          if (typeof gtag !== 'undefined') {
+            gtag('event', 'calendly_popup_opened', { event_category: 'engagement' });
+          }
+        }
+        if (e.data.event === 'calendly.event_scheduled') {
+          if (typeof gtag !== 'undefined') {
+            gtag('event', 'calendly_booking_completed', { event_category: 'conversion' });
+          }
+        }
+      });
+    </script>
+
+    <script type="text/javascript">
       window.addEventListener('load', function() {
         Calendly.initBadgeWidget({
           url: 'https://calendly.com/ifeobijiofor1/30min',

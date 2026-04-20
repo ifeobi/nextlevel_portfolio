@@ -2,6 +2,7 @@ import { lazy, Suspense, useSyncExternalStore } from "react";
 import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { download } from "../assets";
+import { trackEvent } from "../utils/analytics";
 
 const ComputersCanvas = lazy(() => import("./canvas/Computers"));
 
@@ -72,7 +73,10 @@ const Hero = () => {
                 Download CV
               </a>
               <button
-                onClick={() => (window as any).Calendly?.initPopupWidget({ url: 'https://calendly.com/ifeobijiofor1/30min' })}
+                onClick={() => {
+                  trackEvent("calendly_popup_opened", { event_category: "engagement" });
+                  (window as any).Calendly?.initPopupWidget({ url: 'https://calendly.com/ifeobijiofor1/30min' });
+                }}
                 className="flex items-center gap-2 bg-white text-[#915eff] hover:bg-[#f3f0ff] text-[14px] font-semibold px-5 py-2.5 rounded-lg transition-colors duration-200"
               >
                 Book a call
