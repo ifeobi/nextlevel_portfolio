@@ -90,7 +90,7 @@ const Hero = () => {
                 Book a call
               </button>
               <a
-                href="#about"
+                href="#work"
                 className="flex items-center gap-2 border border-[#915eff] text-[#915eff] hover:bg-[#915eff] hover:text-white text-[14px] font-semibold px-5 py-2.5 rounded-lg transition-colors duration-200"
               >
                 See the work →
