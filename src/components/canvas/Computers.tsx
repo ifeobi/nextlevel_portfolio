@@ -4,6 +4,9 @@ import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 
 import CanvasLoader from "../Loader";
 
+/** Matches Tailwind `sm` (640px): smaller scene + touch-friendly controls below this width. */
+const MOBILE_MAX_PX = 639;
+
 const Computers = ({ isMobile }: { isMobile: boolean }) => {
   const computer = useGLTF("./desktop_pc/scene.gltf");
 
@@ -21,8 +24,8 @@ const Computers = ({ isMobile }: { isMobile: boolean }) => {
       />
       <primitive
         object={computer.scene}
-        scale={isMobile ? 0.22 : 0.68}
-        position={isMobile ? [0, -3.9, -0.5] : [0, -4.6, -1.5]}
+        scale={isMobile ? 0.22 : 0.62}
+        position={isMobile ? [0, -3.2, -0.5] : [0, -2.85, -1.35]}
         rotation={[-0.01, 0.2, -0.1]}
       />
     </mesh>
@@ -33,18 +36,13 @@ const ComputersCanvas = () => {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    //add a listener for changes to the screen size
-    const mediaQuery = window.matchMedia("(max-width: 500px)");
-
-    //set the inital value of the "isMobile state variable"
+    const mediaQuery = window.matchMedia(`(max-width: ${MOBILE_MAX_PX}px)`);
     setIsMobile(mediaQuery.matches);
 
-    //Define a callback function to handle changes to the media query.
     const handleMediaQueryChange = (e: MediaQueryListEvent) => {
       setIsMobile(e.matches);
     };
 
-    //Add the callback function as a listener for changes to the media query.
     mediaQuery.addEventListener("change", handleMediaQueryChange);
 
     return () => {
@@ -52,19 +50,40 @@ const ComputersCanvas = () => {
     };
   }, []);
 
+  // One-finger drag orbit fights vertical scrolling on touch; narrow viewports use auto-rotate
+  // + pinch-zoom so users can scroll the page but still interact with pinch.
+  const touchFriendly = isMobile;
+
   return (
     <Canvas
       frameloop="always"
       shadows
-      camera={{ position: [20, 3, 5], fov: 25 }}
-      gl={{ preserveDrawingBuffer: true }}
+      className={`!bg-transparent ${touchFriendly ? "touch-pan-y" : "touch-none"}`}
+      style={{ background: "transparent" }}
+      camera={{ position: [18, 3.4, 6], fov: 26 }}
+      gl={{
+        alpha: true,
+        preserveDrawingBuffer: true,
+        antialias: true,
+      }}
+      onCreated={({ gl }) => {
+        gl.setClearColor(0x000000, 0);
+      }}
     >
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls
           makeDefault
-          enableZoom={false}
+          enablePan={false}
+          enableRotate={!touchFriendly}
+          enableZoom={touchFriendly}
+          autoRotate={touchFriendly}
+          autoRotateSpeed={0.35}
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}
+          enableDamping
+          dampingFactor={0.05}
+          minDistance={12}
+          maxDistance={28}
         />
         <Computers isMobile={isMobile} />
       </Suspense>

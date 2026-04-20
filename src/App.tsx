@@ -10,8 +10,6 @@ import {
   Tech,
   Works,
 } from "./components";
-import PCSection from "./components/PCSection";
-
 const StarsCanvas = lazy(() => import("./components/canvas/Stars"));
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import { trackEvent } from "./utils/analytics";
@@ -60,7 +58,6 @@ const App = () => {
                 <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
                   <Navbar />
                   <Hero />
-                  <PCSection />
                 </div>
                 <About />
                 <Experience />

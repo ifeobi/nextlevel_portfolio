@@ -1,25 +1,28 @@
+import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { download } from "../assets";
+import { ComputersCanvas } from "./canvas";
 
-const LINKEDIN_URL = "https://www.linkedin.com/in/ifechukwu-obijiofor-761040109/";
 const PROFILE_IMG = "https://ik.imagekit.io/sco75u7ale/ife%20from%20chatgpt.png";
 
 const Hero = () => {
   return (
-    <section className="relative w-full h-screen mx-auto flex items-center">
+    <section
+      id="hero"
+      aria-labelledby="hero-heading"
+      className="relative w-full pt-32 pb-12 sm:pt-40 sm:pb-16 mx-auto"
+    >
+      {/* Intro row: accent + headline/CTAs + avatar (aligned to one content width) */}
       <div
         className={`${styles.paddingX} max-w-7xl mx-auto w-full flex items-start gap-5`}
       >
-        {/* accent line */}
-        <div className="flex flex-col justify-center items-center mt-5">
+        <div className="flex flex-col justify-center items-center mt-5 flex-shrink-0">
           <div className="w-5 h-5 rounded-full bg-[#915eff]" />
-          <div className="w-1 sm:h-80 h-40 violet-gradient" />
+          <div className="w-1 sm:h-56 h-36 violet-gradient" />
         </div>
 
-        {/* text + photo */}
-        <div className="flex-1 flex flex-col sm:flex-row sm:items-start sm:justify-between gap-6">
-          <div>
-            {/* availability badge */}
+        <div className="flex-1 min-w-0 flex flex-col lg:flex-row lg:items-start lg:justify-between gap-8">
+          <div className="min-w-0">
             <div className="flex items-center gap-2 mb-3">
               <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
               <span className="text-green-400 text-[13px] font-medium tracking-wide">
@@ -28,6 +31,7 @@ const Hero = () => {
             </div>
 
             <h1
+              id="hero-heading"
               className={`${styles.heroHeadText} lg:text-[72px] sm:text-[54px] xs:text-[46px] text-[36px]`}
             >
               Hi, I'm <span className="text-[#915eff]">Ife</span> —
@@ -40,7 +44,6 @@ const Hero = () => {
               and AI integration. My last system contributed to $2M+ in recovered receivables.
             </p>
 
-            {/* CTA buttons */}
             <div className="mt-6 flex flex-wrap gap-3">
               <a
                 href="/ife-cv.pdf"
@@ -60,14 +63,42 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* profile picture */}
-          <div className="hidden sm:block flex-shrink-0">
+          <div className="hidden sm:block flex-shrink-0 lg:pt-2">
             <div className="w-[130px] h-[130px] rounded-full border-2 border-[#915eff] overflow-hidden shadow-lg shadow-[#915eff33]">
               <img
                 src={PROFILE_IMG}
                 alt="Ife Obijiofor"
                 className="w-full h-full object-cover"
               />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* 3D workspace — below copy on all breakpoints; touch UX tuned in ComputersCanvas */}
+      <div className={`mt-8 sm:mt-10 ${styles.paddingX}`}>
+        <div className="max-w-7xl mx-auto space-y-3">
+          <p className="sm:hidden text-center text-[12px] text-[#aaa6c3] leading-snug px-2">
+            Pinch to zoom the desk · Scroll down anytime to continue
+          </p>
+          <div className="relative w-full h-[min(42vh,420px)] min-h-[240px] sm:h-[min(52vh,560px)] sm:min-h-[300px] rounded-2xl overflow-hidden border border-white/[0.08] bg-transparent isolate">
+            <ComputersCanvas />
+            <div className="pointer-events-none absolute inset-x-0 bottom-4 sm:bottom-5 flex flex-col items-center gap-2">
+              <a
+                href="#about"
+                className="pointer-events-auto sm:hidden text-[13px] font-medium text-secondary hover:text-white transition-colors"
+              >
+                Continue to About ↓
+              </a>
+              <a href="#about" className="pointer-events-auto hidden sm:block" aria-label="Scroll to About">
+                <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
+                  <motion.div
+                    animate={{ y: [0, 24, 0] }}
+                    transition={{ duration: 1.5, repeat: Infinity, repeatType: "loop" }}
+                    className="w-3 h-3 rounded-full bg-secondary mb-1"
+                  />
+                </div>
+              </a>
             </div>
           </div>
         </div>
