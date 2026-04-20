@@ -162,9 +162,23 @@ const testimonials: Testimonial[] = [
 
 const projects: Project[] = [
   {
+    name: "OnlyJewels — Luxury E-Commerce",
+    description:
+      "My first international brief — found through Twitter. A Belgian jewellery brand had spent two years and significant budget going through agencies, and ended up with a bug-ridden site that took two minutes to load. I rebuilt it from scratch with modern tooling, Next.js SSR, image CDN, Stripe, and structured-data SEO. Load time: under 3 seconds.",
+    tags: [
+      { name: "Next.js", color: "blue-text-gradient" },
+      { name: "NestJS", color: "blue-text-gradient" },
+      { name: "MongoDB", color: "green-text-gradient" },
+      { name: "Stripe", color: "pink-text-gradient" },
+    ],
+    image: "https://ik.imagekit.io/ifeobi/details.0_pAhQg5Qq5e.webp",
+    source_code_link: "#",
+    live_site: "https://www.onlyjewels.com",
+  },
+  {
     name: "Sprks — Diamond & Atelier ERP",
     description:
-      "The system that changed everything. A Belgian diamond merchant needed his entire business in code — inventory, accounting, AI document processing, and a multi-channel CRM. Built solo: 1,100+ TypeScript files, a Claude-powered AI Copilot with 38+ tools, and an automated debt recovery system that contributed to $2M+ in recovered receivables.",
+      "That work caught the attention of someone in their circle — a diamond merchant who brought me in to build his entire business infrastructure. Sole engineer: inventory, accounting, AI document processing, multi-channel CRM, and a Claude-powered Copilot with 38+ tools. The debt recovery system contributed to $2M+ in recovered receivables.",
     tags: [
       { name: "NestJS", color: "blue-text-gradient" },
       { name: "Next.js", color: "blue-text-gradient" },
@@ -175,20 +189,6 @@ const projects: Project[] = [
     source_code_link: "#",
     live_site: "#",
     isPrivate: true,
-  },
-  {
-    name: "OnlyJewels — Luxury E-Commerce",
-    description:
-      "Same orbit, different brief. After Sprks, the next call came from the same Belgian circle — a luxury jewellery brand with a 120-second page load bleeding customers. Rebuilt end-to-end: Next.js SSR, image CDN, Stripe, real-time inventory, and structured-data SEO. Load time cut to under 3 seconds.",
-    tags: [
-      { name: "Next.js", color: "blue-text-gradient" },
-      { name: "NestJS", color: "blue-text-gradient" },
-      { name: "MongoDB", color: "green-text-gradient" },
-      { name: "Stripe", color: "pink-text-gradient" },
-    ],
-    image: "https://ik.imagekit.io/ifeobi/details.0_pAhQg5Qq5e.webp",
-    source_code_link: "#",
-    live_site: "https://www.onlyjewels.com",
   },
   {
     name: "U&U Designs — Event Planning",

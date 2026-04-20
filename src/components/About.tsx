@@ -47,13 +47,15 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
       >
-        In 2022 I left a law career in Nigeria and taught myself to code. Two years
-        later I was the sole engineer behind a Belgian diamond merchant's entire digital
-        infrastructure — an enterprise ERP with AI document processing and a debt
-        recovery system that contributed to $2M+ in recovered receivables. That work
-        opened doors across Europe and the United States. I am also building Munai on
-        the side — an AI creative studio I started because the tools I needed did not
-        exist yet.
+        In 2022 I left a law career in Nigeria and taught myself to code. Someone
+        noticed my work on Twitter and handed me my first international brief — a
+        Belgian jewellery brand that had spent two years and significant budget going
+        through agencies, and ended up with a bug-ridden site that took two minutes
+        to load. I rebuilt it from scratch. That work caught the attention of someone
+        in their circle — a diamond merchant who brought me in to build his entire
+        business infrastructure. One thing led to another across Europe and the United
+        States. I am also building Munai on the side — an AI creative studio I started
+        because the tools I needed did not exist yet.
       </motion.p>
 
       <div className="mt-20 flex flex-wrap gap-10">
