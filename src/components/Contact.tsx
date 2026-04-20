@@ -19,7 +19,9 @@ const Contact = () => {
   });
   const [loading, setLoading] = useState(false);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
     const { name, value } = e.target;
 
     setForm({ ...form, [name]: value });
@@ -40,7 +42,7 @@ const Contact = () => {
           to_email: "ifeobijiofor1@gmail.com",
           message: form.message,
         },
-        "N3iIrNRWbcEj_5ZZk"
+        "N3iIrNRWbcEj_5ZZk",
       )
       .then(
         () => {
@@ -57,8 +59,8 @@ const Contact = () => {
         (err) => {
           setLoading(false);
           console.log(err);
-          alert("Something went wrong!")
-        }
+          alert("Something went wrong!");
+        },
       );
   };
 
