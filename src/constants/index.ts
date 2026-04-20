@@ -177,7 +177,7 @@ const projects: Project[] = [
   {
     name: "Sprks — Diamond & Atelier ERP",
     description:
-      "Built solo for a Belgian diamond firm. Enterprise ERP covering inventory, accounting, production, and CRM — with an AI document import pipeline and a Claude-powered Copilot with 38+ tools for natural-language platform control. The automated debt recovery system contributed to $2M+ in recovered receivables. One engineer. One year. Shipped.",
+      "Enterprise ERP for a Belgian diamond trading and atelier jewellery business — built solo. Covers inventory, accounting, production, and CRM, with an AI document import pipeline and a Claude-powered Copilot with 38+ tools for natural-language platform control. Automated debt recovery contributed to $2M+ in recovered receivables.",
     tags: [
       { name: "NestJS", color: "blue-text-gradient" },
       { name: "Next.js", color: "blue-text-gradient" },
@@ -191,7 +191,7 @@ const projects: Project[] = [
   {
     name: "OnlyJewels e-store",
     description:
-      "Antwerp's premium jewellery e-commerce store was bleeding customers under 120-second load times. Rebuilt end-to-end: Next.js SSR, image CDN, real-time inventory, Stripe payments, and advanced structured-data SEO. Load time: under 3 seconds. Brand: saved.",
+      "Antwerp's premium jewellery e-commerce store had a 120-second page load. Rebuilt end-to-end: Next.js SSR, image CDN, real-time inventory, Stripe payments, and advanced structured-data SEO. Load time cut to under 3 seconds.",
     tags: [
       { name: "Next.js", color: "blue-text-gradient" },
       { name: "NestJS", color: "blue-text-gradient" },

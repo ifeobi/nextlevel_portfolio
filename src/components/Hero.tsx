@@ -26,19 +26,19 @@ const Hero = () => {
             <div className="flex items-center gap-2 mb-3">
               <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
               <span className="text-green-400 text-[13px] font-medium tracking-wide">
-                Currently evaluating 1–2 remote partnerships
+                Open to the right remote role
               </span>
             </div>
 
             <h1 className={`${styles.heroHeadText}`}>
-              The engineer companies <span className="text-[#915eff]">bring in</span>{" "}
+              Hi, I'm <span className="text-[#915eff]">Ife</span> —
               <br className="hidden sm:block" />
-              when everything needs to ship.
+              I build AI systems that move the needle.
             </h1>
             <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-              I architect AI-powered SaaS systems solo — end-to-end.{" "}
+              Senior Fullstack Engineer specialising in TypeScript SaaS{" "}
               <br className="hidden sm:block" />
-              My last build contributed to $2M+ in recovered receivables.
+              and AI integration. My last system contributed to $2M+ in recovered receivables.
             </p>
 
             {/* CTA buttons — interactive */}

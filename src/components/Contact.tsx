@@ -68,13 +68,8 @@ const Contact = () => {
         variants={slideIn("left", "tween", 0.2, 1)}
         className="flex-[0.75] bg-black-100 p-8 rounded-2xl"
       >
-        <p className={styles.sectionSubText}>Limited availability</p>
-        <h3 className={styles.sectionHeadText}>Work With Me.</h3>
-        <p className="mt-3 text-secondary text-[15px] leading-[26px] max-w-md">
-          I am evaluating 1–2 remote partnerships for the months ahead. If you
-          need an engineer who can own your product end-to-end — architecture,
-          AI integration, and shipping — tell me what you are building.
-        </p>
+        <p className={styles.sectionSubText}>Get in touch</p>
+        <h3 className={styles.sectionHeadText}>Let's talk.</h3>
 
         <form
           ref={formRef as React.RefObject<HTMLFormElement>}

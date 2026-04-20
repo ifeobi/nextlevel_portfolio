@@ -108,8 +108,8 @@ const Works = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionSubText}`}>Shipped. Live. In production.</p>
-        <h2 className={`${styles.sectionHeadText}`}>What end-to-end ownership looks like.</h2>
+        <p className={`${styles.sectionSubText}`}>My work</p>
+        <h2 className={`${styles.sectionHeadText}`}>Projects.</h2>
       </motion.div>
 
       <div className="w-full flex">
@@ -117,9 +117,9 @@ const Works = () => {
           variants={fadeIn("", "", 0.1, 1)}
           className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]"
         >
-          Not prototypes. Not demos. Every system below is live, battle-tested,
-          and solving a real business problem for real clients — built solo,
-          owned end-to-end, and generating measurable results.
+          A selection of projects that reflect how I work — from enterprise SaaS
+          platforms with embedded AI, to polished consumer products. Each one is
+          live, in production, and solving a real business problem.
         </motion.p>
       </div>
 

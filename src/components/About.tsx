@@ -40,25 +40,24 @@ const About = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionSubText}`}>Why companies hire me over entire teams</p>
-        <h2 className={`${styles.sectionHeadText}`}>I don't build features. I build outcomes.</h2>
+        <p className={`${styles.sectionSubText}`}>A bit about me</p>
+        <h2 className={`${styles.sectionHeadText}`}>I own the product end-to-end.</h2>
       </motion.div>
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
         className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
       >
-        Most companies hire three engineers and still ship slow. I was brought in as
-        the sole engineer for an enterprise-grade ERP — covering inventory, accounting,
-        AI document processing, and a real-time multi-channel CRM for a Belgian diamond
-        trading and atelier jewellery business. I architected and shipped 1,100+
-        TypeScript files: a NestJS + PostgreSQL API, a Next.js frontend, and an internal
-        AI Copilot (powered by Claude) with 38+ tools that gives staff complete
-        natural-language control over the entire platform. The automated debt recovery
-        system I designed contributed to over $2M in recovered receivables. My background
-        in law is not a quirk — it is why I think in systems, edge cases, and business
-        consequences before I write a single line of code. I am currently evaluating
-        1–2 new remote partnerships. If your product needs someone who owns it
-        end-to-end and can prove it — let's talk.
+        I transitioned from law into software engineering in 2022 and have not looked
+        back since. Today I am the sole engineer behind Sprks — an enterprise ERP for
+        a Belgian diamond trading and atelier jewellery business — covering inventory,
+        accounting, AI document processing, and a real-time multi-channel CRM. I
+        architected and shipped 1,100+ TypeScript files: a NestJS + PostgreSQL API, a
+        Next.js frontend, and an internal AI Copilot (powered by Claude) with 38+ tools
+        that gives staff natural-language control over the platform. The automated debt
+        recovery system I built contributed to over $2M in recovered receivables. My
+        legal background gives me a precision for systems thinking and edge cases that
+        I carry into every codebase. If you need someone who can own a product
+        end-to-end and ship things that actually work — let's talk.
       </motion.p>
 
       <div className="mt-20 flex flex-wrap gap-10">
