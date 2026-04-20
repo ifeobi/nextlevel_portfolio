@@ -54,8 +54,9 @@ const About = () => {
         to load. I rebuilt it from scratch. That work caught the attention of someone
         in their circle — a diamond merchant who brought me in to build his entire
         business infrastructure. One thing led to another across Europe and the United
-        States. I am also building Munai on the side — an AI creative studio I started
-        because the tools I needed did not exist yet.
+        States. I am also building Munai on the side — an AI-powered creative platform that
+        brings together transcription, voice cloning, and multi-model image and video
+        generation for content makers.
       </motion.p>
 
       <div className="mt-20 flex flex-wrap gap-10">

@@ -221,7 +221,7 @@ const projects: Project[] = [
   {
     name: "Munai — AI Creative Studio",
     description:
-      "What I build when there is no client brief. An AI creative studio I started because the tools I needed did not exist yet — transcription, live captioning, voice cloning, and a full AI image and video generation suite for content makers.",
+      "What I build when there is no client brief. An AI-powered creative platform that brings together transcription, live captioning, voice cloning, and multi-model image and video generation — so content makers have everything in one place.",
     tags: [
       { name: "Next.js", color: "blue-text-gradient" },
       { name: "NestJS", color: "blue-text-gradient" },
