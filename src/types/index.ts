@@ -43,4 +43,5 @@ export type Project = {
   image: string;
   source_code_link: string;
   live_site: string;
+  isPrivate?: boolean;
 };

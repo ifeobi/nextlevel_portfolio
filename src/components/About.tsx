@@ -40,26 +40,23 @@ const About = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionSubText}`}>Introduction</p>
+        <p className={`${styles.sectionSubText}`}>The story so far</p>
         <h2 className={`${styles.sectionHeadText}`}>Overview.</h2>
       </motion.div>
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
         className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
       >
-        I transitioned from a career in law into software engineering in 2022 — and
-        I have not looked back since. What started with self-taught React projects
-        quickly grew into building full production SaaS platforms. Today I am a
-        Senior Fullstack Engineer at Biggerocks BV in Antwerp, Belgium, where I
-        architected and ship Sprks — an enterprise ERP for the diamond trading and
-        atelier jewellery industry, with a dual AI system — an intelligent document
-        import pipeline and an internal Copilot (powered by the Claude API) that
-        can execute any platform action via natural language — real-time WebSocket
-        infrastructure, and 1,100+ TypeScript files
-        across NestJS, Next.js, PostgreSQL, and more. My legal background gives me
-        a precision for detail and systems thinking that I apply to every codebase
-        I touch. If you need someone who can own a product end-to-end, ship fast,
-        and build things that actually work — let us talk.
+        In 2022 I left a law career in Nigeria and taught myself to code. Someone
+        noticed my work on Twitter and handed me my first international brief — a
+        Belgian jewellery brand that had spent two years and significant budget going
+        through agencies, and ended up with a bug-ridden site that took two minutes
+        to load. I rebuilt it from scratch. That work caught the attention of someone
+        in their circle — a diamond merchant who brought me in to build his entire
+        business infrastructure. One thing led to another across Europe and the United
+        States. I am also building Munai on the side — an AI-powered creative platform that
+        brings together transcription, voice cloning, and multi-model image and video
+        generation for content makers.
       </motion.p>
 
       <div className="mt-20 flex flex-wrap gap-10">

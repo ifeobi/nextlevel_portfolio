@@ -27,7 +27,6 @@ import {
   onlyjewels,
   stripe,
   mrparts,
-  shopify,
   threejs,
   biggerocks,
 } from "../assets";
@@ -39,10 +38,10 @@ export const navLinks: NavLink[] = [
 ];
 
 const services: Service[] = [
-  { title: "Fullstack Engineer", icon: web },
-  { title: "AI Integration Engineer", icon: creator },
-  { title: "Backend / API Architect", icon: backend },
-  { title: "SaaS Product Builder", icon: mobile },
+  { title: "End-to-End Product Engineering", icon: web },
+  { title: "AI Systems That Generate ROI", icon: creator },
+  { title: "Backend / API Architecture", icon: backend },
+  { title: "SaaS from Zero to Production", icon: mobile },
 ];
 
 const technologies: Technology[] = [
@@ -70,12 +69,12 @@ const experiences: Experience[] = [
     iconBg: "#1a1a2e",
     date: "Feb 2024 - Present",
     points: [
-      "Architected and built Sprks — a production-grade SaaS ERP for the diamond trading and atelier jewellery industry, covering inventory, accounting, production, CRM, and document management across two business modules (Carats & Jewels).",
-      "Engineered a dual AI system: an intelligent document import pipeline that extracts and structures data from PDFs, images, and Excel files directly into ERP records; and an internal Copilot (powered by the Claude API) with 38+ tools that mirrors every manual action in the platform — executing batch operations, running processes in the background, and giving staff complete natural-language control over the entire system.",
-      "Built the Desk module — a unified multi-channel inbox (WhatsApp, IONOS email, Trengo) with AI ticket classification, auto-routing, a 6-stage Kanban pipeline, real-time WebSocket gateway, and cross-module sub-ticket linking between Carats and Jewels.",
+      "Sole engineer on a full TypeScript codebase — NestJS + Prisma + PostgreSQL API and Next.js + Redux + MUI frontend — 1,100+ files architected and shipped end-to-end for a production enterprise SaaS serving a Belgian diamond trading and atelier jewellery business.",
       "Designed an automated interest and debt recovery system — calculated accrued interest on overdue client balances, dispatched proactive payment warnings, and generated per-contact accounting reports — directly contributing to over $2M in recovered receivables.",
+      "Engineered a dual AI system: an intelligent document import pipeline that extracts and structures data from PDFs, images, and Excel files directly into ERP records; and an internal Copilot (powered by the Claude API) with 38+ tools that gives staff complete natural-language control over the entire platform.",
+      "Built the Desk module — a unified multi-channel inbox (WhatsApp, IONOS email, Trengo) with AI ticket classification, auto-routing, a 6-stage Kanban pipeline, real-time WebSocket gateway, and cross-module sub-ticket linking.",
       "Integrated live Rapaport diamond pricing, GIA/HRD/IGI certificate auto-fill, ZPL label printing for Zebra printers, BullMQ background workers, and role-based access control across multi-company and legal entity structures.",
-      "Sole engineer on a full TypeScript codebase — NestJS + Prisma + PostgreSQL API and Next.js + Redux + MUI frontend — 1,100+ files shipped and maintained end-to-end.",
+      "Covered the full product surface: inventory (Carats & Jewels modules), accounting, production tracking, CRM, and document management — every module built, owned, and maintained by one engineer.",
     ],
   },
   {
@@ -103,19 +102,6 @@ const experiences: Experience[] = [
       "Collaborated with cross-functional teams to ship high-quality, responsive products on tight deadlines.",
       "Championed performance and accessibility best practices, and contributed to code reviews to uphold engineering standards.",
       "This role marked the start of my professional engineering career, building the foundation that led to architecting full SaaS platforms.",
-    ],
-  },
-  {
-    title: "Shopify Developer",
-    company_name: "Zam&Zom LLC",
-    company_url: "https://zamandzom.com",
-    icon: shopify,
-    iconBg: "#383E56",
-    date: "June 2023 - Dec 2023",
-    points: [
-      "Delivered a fully functional Shopify e-commerce store with custom theme development, app integrations, and a seamless checkout experience.",
-      "Configured payment gateways, inventory management, and SEO tools tailored to the product catalogue.",
-      "Ensured cross-browser compatibility and mobile-first responsiveness throughout.",
     ],
   },
   {
@@ -162,36 +148,9 @@ const testimonials: Testimonial[] = [
 
 const projects: Project[] = [
   {
-    name: "Munai",
+    name: "OnlyJewels — Luxury E-Commerce",
     description:
-      "AI-powered audio platform — transcribe speech to text in seconds, or convert text into natural-sounding audio. Evolving into a full creative AI hub: AI-generated images and videos, and voice cloning so you can use your real voice in content creation.",
-    tags: [
-      { name: "Next.js", color: "blue-text-gradient" },
-      { name: "TypeScript", color: "blue-text-gradient" },
-      { name: "Tailwind CSS", color: "green-text-gradient" },
-    ],
-    image: "https://ik.imagekit.io/sco75u7ale/Screenshot%202026-04-14%20005408.png",
-    source_code_link: "#",
-    live_site: "https://munai.dev",
-  },
-  {
-    name: "Sprks — Diamond & Atelier ERP",
-    description:
-      "Enterprise SaaS ERP for a Belgian diamond trading and atelier jewellery business. AI document import pipeline (PDFs/images/Excel → ERP records) and an internal Copilot with 38+ tools for natural-language platform control. Modules: Carats, Jewels, Desk (multi-channel CRM), and full accounting.",
-    tags: [
-      { name: "NestJS", color: "blue-text-gradient" },
-      { name: "Next.js", color: "blue-text-gradient" },
-      { name: "Claude API", color: "green-text-gradient" },
-      { name: "PostgreSQL", color: "pink-text-gradient" },
-    ],
-    image: "https://ik.imagekit.io/sco75u7ale/Screenshot%202026-04-14%20004507.png",
-    source_code_link: "#",
-    live_site: "https://sprks.net",
-  },
-  {
-    name: "OnlyJewels e-store",
-    description:
-      "Premium jewellery e-commerce platform in Antwerp, Belgium. Page load time cut from 120s to under 3s. Real-time inventory, Stripe payments, advanced SEO, and a custom admin dashboard — live in production.",
+      "My first international brief — found through Twitter. A Belgian jewellery brand had spent two years and significant budget going through agencies, and ended up with a bug-ridden site that took two minutes to load. I rebuilt it from scratch with modern tooling, Next.js SSR, image CDN, Stripe, and structured-data SEO. Load time: under 3 seconds.",
     tags: [
       { name: "Next.js", color: "blue-text-gradient" },
       { name: "NestJS", color: "blue-text-gradient" },
@@ -201,6 +160,61 @@ const projects: Project[] = [
     image: "https://ik.imagekit.io/ifeobi/details.0_pAhQg5Qq5e.webp",
     source_code_link: "#",
     live_site: "https://www.onlyjewels.com",
+  },
+  {
+    name: "Sprks — Diamond & Atelier ERP",
+    description:
+      "That work caught the attention of someone in their circle — a diamond merchant who brought me in to build his entire business infrastructure. Sole engineer: inventory, accounting, AI document processing, multi-channel CRM, and a Claude-powered Copilot with 38+ tools. The debt recovery system contributed to $2M+ in recovered receivables.",
+    tags: [
+      { name: "NestJS", color: "blue-text-gradient" },
+      { name: "Next.js", color: "blue-text-gradient" },
+      { name: "Claude API", color: "green-text-gradient" },
+      { name: "PostgreSQL", color: "pink-text-gradient" },
+    ],
+    image: "https://ik.imagekit.io/sco75u7ale/Screenshot%202026-04-14%20004507.png",
+    source_code_link: "#",
+    live_site: "#",
+    isPrivate: true,
+  },
+  {
+    name: "U&U Designs — Event Planning",
+    description:
+      "Word crossed the Atlantic. A US-based event planning company needed a digital presence that matched the standard of their events — polished, fast, and built to convert. Delivered end-to-end.",
+    tags: [
+      { name: "Next.js", color: "blue-text-gradient" },
+      { name: "TypeScript", color: "blue-text-gradient" },
+      { name: "Tailwind CSS", color: "green-text-gradient" },
+    ],
+    image: "https://ik.imagekit.io/sco75u7ale/p8.webp?updatedAt=1776123779406",
+    source_code_link: "#",
+    live_site: "https://uandudesigns.com",
+  },
+  {
+    name: "TSH Living — Construction Co.",
+    description:
+      "A construction entrepreneur wanted something specific — a site so well-built he could hand it off and never call me again. Dynamic content management, a full admin portal, and a public-facing site he can update without a developer. Built to outlast my involvement.",
+    tags: [
+      { name: "Next.js", color: "blue-text-gradient" },
+      { name: "NestJS", color: "blue-text-gradient" },
+      { name: "PostgreSQL", color: "green-text-gradient" },
+    ],
+    image: "https://ik.imagekit.io/Joshua/tsh-living/listings/the-meridian-house/hero/4ed17ae547f2b25beb43e2af545405f4cefd16616d092a3582ab736fd2ffc17b.jpg",
+    source_code_link: "#",
+    live_site: "https://tshliving-fetest.vercel.app",
+  },
+  {
+    name: "Munai — AI Creative Studio",
+    description:
+      "What I build when there is no client brief. An AI-powered creative platform that brings together transcription, live captioning, voice cloning, and multi-model image and video generation — so content makers have everything in one place.",
+    tags: [
+      { name: "Next.js", color: "blue-text-gradient" },
+      { name: "NestJS", color: "blue-text-gradient" },
+      { name: "Fish Audio", color: "green-text-gradient" },
+      { name: "PostgreSQL", color: "pink-text-gradient" },
+    ],
+    image: "https://ik.imagekit.io/sco75u7ale/Screenshot%202026-04-14%20005408.png",
+    source_code_link: "#",
+    live_site: "https://munai.dev",
   },
 ];
 

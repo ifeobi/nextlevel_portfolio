@@ -19,7 +19,9 @@ const Contact = () => {
   });
   const [loading, setLoading] = useState(false);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
     const { name, value } = e.target;
 
     setForm({ ...form, [name]: value });
@@ -40,7 +42,7 @@ const Contact = () => {
           to_email: "ifeobijiofor1@gmail.com",
           message: form.message,
         },
-        "N3iIrNRWbcEj_5ZZk"
+        "N3iIrNRWbcEj_5ZZk",
       )
       .then(
         () => {
@@ -57,8 +59,8 @@ const Contact = () => {
         (err) => {
           setLoading(false);
           console.log(err);
-          alert("Something went wrong!")
-        }
+          alert("Something went wrong!");
+        },
       );
   };
 
@@ -68,8 +70,8 @@ const Contact = () => {
         variants={slideIn("left", "tween", 0.2, 1)}
         className="flex-[0.75] bg-black-100 p-8 rounded-2xl"
       >
-        <p className={styles.sectionSubText}>Get in touch with me</p>
-        <h3 className={styles.sectionHeadText}>Contact.</h3>
+        <p className={styles.sectionSubText}>Get in touch</p>
+        <h3 className={styles.sectionHeadText}>Let's talk.</h3>
 
         <form
           ref={formRef as React.RefObject<HTMLFormElement>}
@@ -83,7 +85,7 @@ const Contact = () => {
               name="name"
               value={form.name}
               onChange={handleChange}
-              placeholder="What's your name?"
+              placeholder="Your name"
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium"
             />
           </label>
@@ -94,7 +96,7 @@ const Contact = () => {
               name="email"
               value={form.email}
               onChange={handleChange}
-              placeholder="What's your email?"
+              placeholder="Company or work email"
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium"
             />
           </label>
@@ -105,7 +107,7 @@ const Contact = () => {
               name="message"
               value={form.message}
               onChange={handleChange}
-              placeholder="Leave a message for Ife"
+              placeholder="What are you building, what's broken, and what does a win look like for you?"
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium"
             />
           </label>
@@ -114,7 +116,7 @@ const Contact = () => {
             type="submit"
             className="bg-tertiary py-3 px-8 outline-none w-fit text-white font-bold shadow-md shadow-primary rounded-xl"
           >
-            {loading ? "Sending..." : "Send"}
+            {loading ? "Sending..." : "Send →"}
           </button>
         </form>
       </motion.div>
