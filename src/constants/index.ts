@@ -185,8 +185,7 @@ const projects: Project[] = [
       { name: "TypeScript", color: "blue-text-gradient" },
       { name: "Tailwind CSS", color: "green-text-gradient" },
     ],
-    // TODO: upload screenshot to ImageKit and replace this URL
-    image: "https://placehold.co/600x400/1a1a2e/aaa6c3?text=U%26U+Designs",
+    image: "https://ik.imagekit.io/sco75u7ale/p8.webp?updatedAt=1776123779406",
     source_code_link: "#",
     live_site: "https://uandudesigns.com",
   },
@@ -199,8 +198,7 @@ const projects: Project[] = [
       { name: "NestJS", color: "blue-text-gradient" },
       { name: "PostgreSQL", color: "green-text-gradient" },
     ],
-    // TODO: upload screenshot to ImageKit and replace this URL
-    image: "https://placehold.co/600x400/1a1a2e/aaa6c3?text=TSH+Living",
+    image: "https://ik.imagekit.io/Joshua/tsh-living/listings/the-meridian-house/hero/4ed17ae547f2b25beb43e2af545405f4cefd16616d092a3582ab736fd2ffc17b.jpg",
     source_code_link: "#",
     live_site: "https://tshliving-fetest.vercel.app",
   },
