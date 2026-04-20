@@ -39,10 +39,10 @@ export const navLinks: NavLink[] = [
 ];
 
 const services: Service[] = [
-  { title: "Fullstack Engineer", icon: web },
-  { title: "AI Integration Engineer", icon: creator },
-  { title: "Backend / API Architect", icon: backend },
-  { title: "SaaS Product Builder", icon: mobile },
+  { title: "End-to-End Product Engineering", icon: web },
+  { title: "AI Systems That Generate ROI", icon: creator },
+  { title: "Backend / API Architecture", icon: backend },
+  { title: "SaaS from Zero to Production", icon: mobile },
 ];
 
 const technologies: Technology[] = [
@@ -70,12 +70,12 @@ const experiences: Experience[] = [
     iconBg: "#1a1a2e",
     date: "Feb 2024 - Present",
     points: [
-      "Architected and built Sprks — a production-grade SaaS ERP for the diamond trading and atelier jewellery industry, covering inventory, accounting, production, CRM, and document management across two business modules (Carats & Jewels).",
-      "Engineered a dual AI system: an intelligent document import pipeline that extracts and structures data from PDFs, images, and Excel files directly into ERP records; and an internal Copilot (powered by the Claude API) with 38+ tools that mirrors every manual action in the platform — executing batch operations, running processes in the background, and giving staff complete natural-language control over the entire system.",
-      "Built the Desk module — a unified multi-channel inbox (WhatsApp, IONOS email, Trengo) with AI ticket classification, auto-routing, a 6-stage Kanban pipeline, real-time WebSocket gateway, and cross-module sub-ticket linking between Carats and Jewels.",
+      "Sole engineer on a full TypeScript codebase — NestJS + Prisma + PostgreSQL API and Next.js + Redux + MUI frontend — 1,100+ files architected and shipped end-to-end for a production enterprise SaaS serving a Belgian diamond trading and atelier jewellery business.",
       "Designed an automated interest and debt recovery system — calculated accrued interest on overdue client balances, dispatched proactive payment warnings, and generated per-contact accounting reports — directly contributing to over $2M in recovered receivables.",
+      "Engineered a dual AI system: an intelligent document import pipeline that extracts and structures data from PDFs, images, and Excel files directly into ERP records; and an internal Copilot (powered by the Claude API) with 38+ tools that gives staff complete natural-language control over the entire platform.",
+      "Built the Desk module — a unified multi-channel inbox (WhatsApp, IONOS email, Trengo) with AI ticket classification, auto-routing, a 6-stage Kanban pipeline, real-time WebSocket gateway, and cross-module sub-ticket linking.",
       "Integrated live Rapaport diamond pricing, GIA/HRD/IGI certificate auto-fill, ZPL label printing for Zebra printers, BullMQ background workers, and role-based access control across multi-company and legal entity structures.",
-      "Sole engineer on a full TypeScript codebase — NestJS + Prisma + PostgreSQL API and Next.js + Redux + MUI frontend — 1,100+ files shipped and maintained end-to-end.",
+      "Covered the full product surface: inventory (Carats & Jewels modules), accounting, production tracking, CRM, and document management — every module built, owned, and maintained by one engineer.",
     ],
   },
   {
@@ -164,7 +164,7 @@ const projects: Project[] = [
   {
     name: "Munai",
     description:
-      "AI-powered audio platform — transcribe speech to text in seconds, or convert text into natural-sounding audio. Evolving into a full creative AI hub: AI-generated images and videos, and voice cloning so you can use your real voice in content creation.",
+      "AI audio platform for creators who are tired of robotic voice tools. Speech-to-text in seconds, natural-sounding text-to-audio, and a voice cloning engine in development. Built on Next.js + TypeScript — evolving into a full creative AI hub for content production.",
     tags: [
       { name: "Next.js", color: "blue-text-gradient" },
       { name: "TypeScript", color: "blue-text-gradient" },
@@ -177,7 +177,7 @@ const projects: Project[] = [
   {
     name: "Sprks — Diamond & Atelier ERP",
     description:
-      "Enterprise SaaS ERP for a Belgian diamond trading and atelier jewellery business. AI document import pipeline (PDFs/images/Excel → ERP records) and an internal Copilot with 38+ tools for natural-language platform control. Modules: Carats, Jewels, Desk (multi-channel CRM), and full accounting.",
+      "Built solo for a Belgian diamond firm. Enterprise ERP covering inventory, accounting, production, and CRM — with an AI document import pipeline and a Claude-powered Copilot with 38+ tools for natural-language platform control. The automated debt recovery system contributed to $2M+ in recovered receivables. One engineer. One year. Shipped.",
     tags: [
       { name: "NestJS", color: "blue-text-gradient" },
       { name: "Next.js", color: "blue-text-gradient" },
@@ -191,7 +191,7 @@ const projects: Project[] = [
   {
     name: "OnlyJewels e-store",
     description:
-      "Premium jewellery e-commerce platform in Antwerp, Belgium. Page load time cut from 120s to under 3s. Real-time inventory, Stripe payments, advanced SEO, and a custom admin dashboard — live in production.",
+      "Antwerp's premium jewellery e-commerce store was bleeding customers under 120-second load times. Rebuilt end-to-end: Next.js SSR, image CDN, real-time inventory, Stripe payments, and advanced structured-data SEO. Load time: under 3 seconds. Brand: saved.",
     tags: [
       { name: "Next.js", color: "blue-text-gradient" },
       { name: "NestJS", color: "blue-text-gradient" },

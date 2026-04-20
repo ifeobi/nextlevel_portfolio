@@ -22,21 +22,23 @@ const Hero = () => {
         {/* text + photo */}
         <div className="flex-1 flex flex-col sm:flex-row sm:items-start sm:justify-between gap-6">
           <div>
-            {/* open-to-work badge */}
+            {/* availability badge */}
             <div className="flex items-center gap-2 mb-3">
               <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
               <span className="text-green-400 text-[13px] font-medium tracking-wide">
-                Open to remote opportunities
+                Currently evaluating 1–2 remote partnerships
               </span>
             </div>
 
             <h1 className={`${styles.heroHeadText}`}>
-              Hi, I'm <span className="text-[#915eff]">Ife</span>
+              The engineer companies <span className="text-[#915eff]">bring in</span>{" "}
+              <br className="hidden sm:block" />
+              when everything needs to ship.
             </h1>
             <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-              I build SaaS platforms, AI-powered{" "}
+              I architect AI-powered SaaS systems solo — end-to-end.{" "}
               <br className="hidden sm:block" />
-              systems, and full-stack web applications.
+              My last build contributed to $2M+ in recovered receivables.
             </p>
 
             {/* CTA buttons — interactive */}
@@ -51,12 +53,10 @@ const Hero = () => {
                 Download CV
               </a>
               <a
-                href={LINKEDIN_URL}
-                target="_blank"
-                rel="noopener noreferrer"
+                href="#work"
                 className="flex items-center gap-2 border border-[#915eff] text-[#915eff] hover:bg-[#915eff] hover:text-white text-[14px] font-semibold px-5 py-2.5 rounded-lg transition-colors duration-200"
               >
-                LinkedIn
+                See the work →
               </a>
             </div>
           </div>

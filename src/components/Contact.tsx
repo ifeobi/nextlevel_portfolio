@@ -68,8 +68,13 @@ const Contact = () => {
         variants={slideIn("left", "tween", 0.2, 1)}
         className="flex-[0.75] bg-black-100 p-8 rounded-2xl"
       >
-        <p className={styles.sectionSubText}>Get in touch with me</p>
-        <h3 className={styles.sectionHeadText}>Contact.</h3>
+        <p className={styles.sectionSubText}>Limited availability</p>
+        <h3 className={styles.sectionHeadText}>Work With Me.</h3>
+        <p className="mt-3 text-secondary text-[15px] leading-[26px] max-w-md">
+          I am evaluating 1–2 remote partnerships for the months ahead. If you
+          need an engineer who can own your product end-to-end — architecture,
+          AI integration, and shipping — tell me what you are building.
+        </p>
 
         <form
           ref={formRef as React.RefObject<HTMLFormElement>}
@@ -83,7 +88,7 @@ const Contact = () => {
               name="name"
               value={form.name}
               onChange={handleChange}
-              placeholder="What's your name?"
+              placeholder="Your name"
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium"
             />
           </label>
@@ -94,7 +99,7 @@ const Contact = () => {
               name="email"
               value={form.email}
               onChange={handleChange}
-              placeholder="What's your email?"
+              placeholder="Company or work email"
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium"
             />
           </label>
@@ -105,7 +110,7 @@ const Contact = () => {
               name="message"
               value={form.message}
               onChange={handleChange}
-              placeholder="Leave a message for Ife"
+              placeholder="What are you building, what's broken, and what does a win look like for you?"
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium"
             />
           </label>
@@ -114,7 +119,7 @@ const Contact = () => {
             type="submit"
             className="bg-tertiary py-3 px-8 outline-none w-fit text-white font-bold shadow-md shadow-primary rounded-xl"
           >
-            {loading ? "Sending..." : "Send"}
+            {loading ? "Sending..." : "Send →"}
           </button>
         </form>
       </motion.div>

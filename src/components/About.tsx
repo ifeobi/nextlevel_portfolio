@@ -40,26 +40,25 @@ const About = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionSubText}`}>Introduction</p>
-        <h2 className={`${styles.sectionHeadText}`}>Overview.</h2>
+        <p className={`${styles.sectionSubText}`}>Why companies hire me over entire teams</p>
+        <h2 className={`${styles.sectionHeadText}`}>I don't build features. I build outcomes.</h2>
       </motion.div>
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
         className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
       >
-        I transitioned from a career in law into software engineering in 2022 — and
-        I have not looked back since. What started with self-taught React projects
-        quickly grew into building full production SaaS platforms. Today I am a
-        Senior Fullstack Engineer at Biggerocks BV in Antwerp, Belgium, where I
-        architected and ship Sprks — an enterprise ERP for the diamond trading and
-        atelier jewellery industry, with a dual AI system — an intelligent document
-        import pipeline and an internal Copilot (powered by the Claude API) that
-        can execute any platform action via natural language — real-time WebSocket
-        infrastructure, and 1,100+ TypeScript files
-        across NestJS, Next.js, PostgreSQL, and more. My legal background gives me
-        a precision for detail and systems thinking that I apply to every codebase
-        I touch. If you need someone who can own a product end-to-end, ship fast,
-        and build things that actually work — let us talk.
+        Most companies hire three engineers and still ship slow. I was brought in as
+        the sole engineer for an enterprise-grade ERP — covering inventory, accounting,
+        AI document processing, and a real-time multi-channel CRM for a Belgian diamond
+        trading and atelier jewellery business. I architected and shipped 1,100+
+        TypeScript files: a NestJS + PostgreSQL API, a Next.js frontend, and an internal
+        AI Copilot (powered by Claude) with 38+ tools that gives staff complete
+        natural-language control over the entire platform. The automated debt recovery
+        system I designed contributed to over $2M in recovered receivables. My background
+        in law is not a quirk — it is why I think in systems, edge cases, and business
+        consequences before I write a single line of code. I am currently evaluating
+        1–2 new remote partnerships. If your product needs someone who owns it
+        end-to-end and can prove it — let's talk.
       </motion.p>
 
       <div className="mt-20 flex flex-wrap gap-10">
