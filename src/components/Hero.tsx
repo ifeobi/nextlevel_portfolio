@@ -1,11 +1,28 @@
+import { lazy, Suspense, useSyncExternalStore } from "react";
 import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { download } from "../assets";
-import { ComputersCanvas } from "./canvas";
+
+const ComputersCanvas = lazy(() => import("./canvas/Computers"));
 
 const PROFILE_IMG = "https://ik.imagekit.io/sco75u7ale/ife%20from%20chatgpt.png";
 
+/** Avoid mounting WebGL on narrow viewports (Tailwind `sm` = 640px). */
+function useMinWidthSm() {
+  return useSyncExternalStore(
+    (onChange) => {
+      const mq = window.matchMedia("(min-width: 640px)");
+      mq.addEventListener("change", onChange);
+      return () => mq.removeEventListener("change", onChange);
+    },
+    () => window.matchMedia("(min-width: 640px)").matches,
+    () => false
+  );
+}
+
 const Hero = () => {
+  const showDeskCanvas = useMinWidthSm();
+
   return (
     <section
       id="hero"
@@ -75,34 +92,28 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* 3D workspace — below copy on all breakpoints; touch UX tuned in ComputersCanvas */}
-      <div className={`mt-8 sm:mt-10 ${styles.paddingX}`}>
-        <div className="max-w-7xl mx-auto space-y-3">
-          <p className="sm:hidden text-center text-[12px] text-[#aaa6c3] leading-snug px-2">
-            Pinch to zoom the desk · Scroll down anytime to continue
-          </p>
-          <div className="relative w-full h-[min(42vh,420px)] min-h-[240px] sm:h-[min(52vh,560px)] sm:min-h-[300px] rounded-2xl overflow-hidden border border-white/[0.08] bg-transparent isolate">
-            <ComputersCanvas />
-            <div className="pointer-events-none absolute inset-x-0 bottom-4 sm:bottom-5 flex flex-col items-center gap-2">
-              <a
-                href="#about"
-                className="pointer-events-auto sm:hidden text-[13px] font-medium text-secondary hover:text-white transition-colors"
-              >
-                Continue to About ↓
-              </a>
-              <a href="#about" className="pointer-events-auto hidden sm:block" aria-label="Scroll to About">
-                <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
-                  <motion.div
-                    animate={{ y: [0, 24, 0] }}
-                    transition={{ duration: 1.5, repeat: Infinity, repeatType: "loop" }}
-                    className="w-3 h-3 rounded-full bg-secondary mb-1"
-                  />
-                </div>
-              </a>
+      {showDeskCanvas ? (
+        <div className={`mt-8 sm:mt-10 ${styles.paddingX}`}>
+          <div className="max-w-7xl mx-auto">
+            <div className="relative w-full h-[min(52vh,560px)] min-h-[300px] rounded-2xl overflow-hidden border border-white/[0.08] bg-transparent isolate">
+              <Suspense fallback={null}>
+                <ComputersCanvas />
+              </Suspense>
+              <div className="pointer-events-none absolute inset-x-0 bottom-5 flex justify-center">
+                <a href="#about" className="pointer-events-auto" aria-label="Scroll to About">
+                  <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
+                    <motion.div
+                      animate={{ y: [0, 24, 0] }}
+                      transition={{ duration: 1.5, repeat: Infinity, repeatType: "loop" }}
+                      className="w-3 h-3 rounded-full bg-secondary mb-1"
+                    />
+                  </div>
+                </a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      ) : null}
     </section>
   );
 };
