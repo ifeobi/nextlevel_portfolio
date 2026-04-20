@@ -27,7 +27,6 @@ import {
   onlyjewels,
   stripe,
   mrparts,
-  shopify,
   threejs,
   biggerocks,
 } from "../assets";
@@ -103,19 +102,6 @@ const experiences: Experience[] = [
       "Collaborated with cross-functional teams to ship high-quality, responsive products on tight deadlines.",
       "Championed performance and accessibility best practices, and contributed to code reviews to uphold engineering standards.",
       "This role marked the start of my professional engineering career, building the foundation that led to architecting full SaaS platforms.",
-    ],
-  },
-  {
-    title: "Shopify Developer",
-    company_name: "Zam&Zom LLC",
-    company_url: "https://zamandzom.com",
-    icon: shopify,
-    iconBg: "#383E56",
-    date: "June 2023 - Dec 2023",
-    points: [
-      "Delivered a fully functional Shopify e-commerce store with custom theme development, app integrations, and a seamless checkout experience.",
-      "Configured payment gateways, inventory management, and SEO tools tailored to the product catalogue.",
-      "Ensured cross-browser compatibility and mobile-first responsiveness throughout.",
     ],
   },
   {
