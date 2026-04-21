@@ -214,7 +214,7 @@ const projects: Project[] = [
     ],
     image: "https://ik.imagekit.io/sco75u7ale/Screenshot%202026-04-14%20005408.png",
     source_code_link: "#",
-    live_site: "https://munai.dev",
+    live_site: "https://munai-fetest.vercel.app",
   },
 ];
 
