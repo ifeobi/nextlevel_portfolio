@@ -12,6 +12,7 @@ const EarthCanvas = lazy(() => import("./canvas/Earth"));
 
 const Contact = () => {
   const formRef = useRef<HTMLFormElement>(null);
+  const hasStartedTyping = useRef(false);
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -23,7 +24,10 @@ const Contact = () => {
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     const { name, value } = e.target;
-
+    if (!hasStartedTyping.current && value.length > 0) {
+      hasStartedTyping.current = true;
+      trackEvent("contact_form_field_start", { event_category: "engagement", field: name });
+    }
     setForm({ ...form, [name]: value });
   };
 

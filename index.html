@@ -34,11 +34,6 @@
         if (!e.data) return;
         var data = typeof e.data === 'string' ? JSON.parse(e.data) : e.data;
         if (!data.event) return;
-        if (data.event === 'calendly.event_type_viewed') {
-          if (typeof gtag !== 'undefined') {
-            gtag('event', 'calendly_popup_opened', { event_category: 'engagement' });
-          }
-        }
         if (data.event === 'calendly.event_scheduled') {
           if (typeof gtag !== 'undefined') {
             gtag('event', 'calendly_booking_completed', { event_category: 'conversion' });

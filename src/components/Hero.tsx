@@ -1,8 +1,9 @@
-import { lazy, Suspense, useSyncExternalStore } from "react";
+import { lazy, Suspense, useSyncExternalStore, useState } from "react";
 import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { download } from "../assets";
 import { trackEvent } from "../utils/analytics";
+import CalendlyAbandonModal from "./CalendlyAbandonModal";
 
 const ComputersCanvas = lazy(() => import("./canvas/Computers"));
 
@@ -23,6 +24,43 @@ function useMinWidthSm() {
 
 const Hero = () => {
   const showDeskCanvas = useMinWidthSm();
+  const [showAbandonModal, setShowAbandonModal] = useState(false);
+
+  const handleBookCall = () => {
+    trackEvent("calendly_popup_opened", { event_category: "engagement" });
+
+    let booked = false;
+    let overlaySeenOnce = false;
+
+    const handleMessage = (e: MessageEvent) => {
+      try {
+        const data = typeof e.data === "string" ? JSON.parse(e.data) : e.data;
+        if (data?.event === "calendly.event_scheduled") {
+          booked = true;
+        }
+      } catch {
+        // ignore non-JSON messages
+      }
+    };
+    window.addEventListener("message", handleMessage);
+
+    const observer = new MutationObserver(() => {
+      const overlay = document.querySelector(".calendly-overlay");
+      if (overlay) {
+        overlaySeenOnce = true;
+      } else if (overlaySeenOnce) {
+        observer.disconnect();
+        window.removeEventListener("message", handleMessage);
+        if (!booked) {
+          trackEvent("calendly_popup_abandoned", { event_category: "engagement" });
+          setShowAbandonModal(true);
+        }
+      }
+    });
+
+    observer.observe(document.body, { childList: true, subtree: true });
+    (window as any).Calendly?.initPopupWidget({ url: "https://calendly.com/ifeobijiofor1/30min" });
+  };
 
   return (
     <section
@@ -81,10 +119,7 @@ const Hero = () => {
                 Download CV
               </a>
               <button
-                onClick={() => {
-                  trackEvent("calendly_popup_opened", { event_category: "engagement" });
-                  (window as any).Calendly?.initPopupWidget({ url: 'https://calendly.com/ifeobijiofor1/30min' });
-                }}
+                onClick={handleBookCall}
                 className="flex items-center gap-2 bg-white text-[#915eff] hover:bg-[#f3f0ff] text-[14px] font-semibold px-5 py-2.5 rounded-lg transition-colors duration-200"
               >
                 Book a call
@@ -132,6 +167,11 @@ const Hero = () => {
           </div>
         </div>
       ) : null}
+
+      <CalendlyAbandonModal
+        isOpen={showAbandonModal}
+        onClose={() => setShowAbandonModal(false)}
+      />
     </section>
   );
 };
