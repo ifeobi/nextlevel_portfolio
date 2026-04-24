@@ -6,68 +6,98 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Primary meta -->
-    <title>Ife Obijiofor — Senior Fullstack Engineer &amp; AI Systems Architect</title>
-    <meta name="description" content="I architect production AI systems that generate real business results. Built an ERP that contributed to $2M+ in recovered receivables. Cut page load from 120s to 3s. Now evaluating 1–2 remote roles." />
-    <meta name="keywords" content="Ife Obijiofor, Senior Fullstack Engineer, hire fullstack engineer, remote fullstack engineer, AI integration engineer, NestJS developer, Next.js developer, SaaS architect, TypeScript engineer, enterprise AI systems" />
+    <title>
+      Ife Obijiofor — Senior Fullstack Engineer &amp; AI Systems Architect
+    </title>
+    <meta
+      name="description"
+      content="I architect production AI systems that generate real business results. Built an ERP that contributed to $2M+ in recovered receivables. Cut page load from 120s to 3s. Now evaluating 1–2 remote roles."
+    />
+    <meta
+      name="keywords"
+      content="Ife Obijiofor, Senior Fullstack Engineer, hire fullstack engineer, remote fullstack engineer, AI integration engineer, NestJS developer, Next.js developer, SaaS architect, TypeScript engineer, enterprise AI systems"
+    />
     <meta name="author" content="Ife Obijiofor" />
     <meta name="robots" content="index, follow" />
 
     <!-- Open Graph (LinkedIn, Facebook, WhatsApp previews) -->
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Ife Obijiofor — The Fullstack Engineer Who Builds AI That Generates ROI" />
-    <meta property="og:description" content="I architect production AI systems that generate real business results. Built an ERP that contributed to $2M+ in recovered receivables. Cut page load from 120s to 3s. Now evaluating 1–2 remote roles." />
-    <meta property="og:image" content="https://ik.imagekit.io/sco75u7ale/ife%20from%20chatgpt.png" />
+    <meta
+      property="og:title"
+      content="Ife Obijiofor — The Fullstack Engineer Who Builds AI That Generates ROI"
+    />
+    <meta
+      property="og:description"
+      content="I architect production AI systems that generate real business results. Built an ERP that contributed to $2M+ in recovered receivables. Cut page load from 120s to 3s. Now evaluating 1–2 remote roles."
+    />
+    <meta
+      property="og:image"
+      content="https://ik.imagekit.io/sco75u7ale/ife%20from%20chatgpt.png"
+    />
     <meta property="og:image:width" content="400" />
     <meta property="og:image:height" content="400" />
 
     <!-- Twitter card -->
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="Ife Obijiofor — Fullstack Engineer &amp; AI Systems Architect" />
-    <meta name="twitter:description" content="I architect AI systems that generate real business results. $2M+ in recovered receivables. 120s → 3s load time. Now evaluating remote roles." />
-    <meta name="twitter:image" content="https://ik.imagekit.io/sco75u7ale/ife%20from%20chatgpt.png" />
+    <meta
+      name="twitter:title"
+      content="Ife Obijiofor — Fullstack Engineer &amp; AI Systems Architect"
+    />
+    <meta
+      name="twitter:description"
+      content="I architect AI systems that generate real business results. $2M+ in recovered receivables. 120s → 3s load time. Now evaluating remote roles."
+    />
+    <meta
+      name="twitter:image"
+      content="https://ik.imagekit.io/sco75u7ale/ife%20from%20chatgpt.png"
+    />
 
     <!-- Calendly badge widget -->
-    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+    <link
+      href="https://assets.calendly.com/assets/external/widget.css"
+      rel="stylesheet"
+    />
+    <script
+      src="https://assets.calendly.com/assets/external/widget.js"
+      type="text/javascript"
+      async
+    ></script>
     <script type="text/javascript">
-      window.addEventListener('message', function(e) {
+      window.addEventListener("message", function (e) {
         if (!e.data) return;
-        var data = typeof e.data === 'string' ? JSON.parse(e.data) : e.data;
+        var data = typeof e.data === "string" ? JSON.parse(e.data) : e.data;
         if (!data.event) return;
-        if (data.event === 'calendly.event_scheduled') {
-          if (typeof gtag !== 'undefined') {
-            gtag('event', 'calendly_booking_completed', { event_category: 'conversion' });
+        if (data.event === "calendly.event_scheduled") {
+          if (typeof gtag !== "undefined") {
+            gtag("event", "calendly_booking_completed", {
+              event_category: "conversion",
+            });
           }
         }
       });
     </script>
 
-    <script type="text/javascript">
-      window.addEventListener('load', function() {
-        Calendly.initBadgeWidget({
-          url: 'https://calendly.com/ifeobijiofor1/30min',
-          text: 'Book a call',
-          color: '#915eff',
-          textColor: '#ffffff',
-          branding: false
-        });
-      });
-    </script>
+    <!-- Calendly badge widget removed: Hero CTA + Ifex chat are the booking entry points. -->
 
     <!-- Theme colour (browser chrome on mobile) -->
     <meta name="theme-color" content="#050816" />
 
     <!-- Google tag (gtag.js) — skipped on localhost -->
     <script>
-      if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
-        var s = document.createElement('script');
+      if (
+        location.hostname !== "localhost" &&
+        location.hostname !== "127.0.0.1"
+      ) {
+        var s = document.createElement("script");
         s.async = true;
-        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-5BVWJML3HE';
+        s.src = "https://www.googletagmanager.com/gtag/js?id=G-5BVWJML3HE";
         document.head.appendChild(s);
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-5BVWJML3HE');
+        function gtag() {
+          dataLayer.push(arguments);
+        }
+        gtag("js", new Date());
+        gtag("config", "G-5BVWJML3HE");
       }
     </script>
   </head>

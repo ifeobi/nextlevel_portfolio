@@ -12,6 +12,7 @@ import {
 } from "./components";
 const StarsCanvas = lazy(() => import("./components/canvas/Stars"));
 import PrivacyPolicy from "./pages/PrivacyPolicy";
+const ChatWidget = lazy(() => import("./ifex/ChatWidget"));
 
 const Footer = () => (
   <footer className="w-full py-4 px-6 flex justify-center items-center gap-6 border-t border-[#1a1a4a]" style={{ backgroundColor: "#050816" }}>
@@ -51,6 +52,9 @@ const App = () => {
                 </Suspense>
               </div>
               <Footer />
+              <Suspense fallback={null}>
+                <ChatWidget />
+              </Suspense>
             </>
           }
         />

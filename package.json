@@ -5,13 +5,18 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "predev": "node scripts/fetch-github-stats.mjs",
     "build": "vite build",
+    "prebuild": "node scripts/fetch-github-stats.mjs",
+    "stats:refresh": "node scripts/fetch-github-stats.mjs",
     "lint": "eslint . --ext js,jsx,ts,tsx --report-unused-disable-directives --max-warnings 0",
     "type-check": "tsc --noEmit",
     "preview": "vite preview"
   },
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.91.0",
     "@emailjs/browser": "^3.11.0",
+    "@neondatabase/serverless": "^1.1.0",
     "@react-three/drei": "^9.56.0",
     "@react-three/fiber": "^8.11.1",
     "@vercel/analytics": "^2.0.1",
@@ -26,6 +31,7 @@
     "three": "^0.149.0"
   },
   "devDependencies": {
+    "@types/node": "^25.6.0",
     "@types/react": "^18.3.28",
     "@types/react-dom": "^18.3.7",
     "@types/react-vertical-timeline-component": "^3.3.6",

@@ -7,7 +7,8 @@ import CalendlyAbandonModal from "./CalendlyAbandonModal";
 
 const ComputersCanvas = lazy(() => import("./canvas/Computers"));
 
-const PROFILE_IMG = "https://ik.imagekit.io/sco75u7ale/ife%20from%20chatgpt.png";
+const PROFILE_IMG =
+  "https://ik.imagekit.io/sco75u7ale/ife%20from%20chatgpt.png";
 
 /** Avoid mounting WebGL on narrow viewports (Tailwind `sm` = 640px). */
 function useMinWidthSm() {
@@ -18,7 +19,7 @@ function useMinWidthSm() {
       return () => mq.removeEventListener("change", onChange);
     },
     () => window.matchMedia("(min-width: 640px)").matches,
-    () => false
+    () => false,
   );
 }
 
@@ -52,14 +53,18 @@ const Hero = () => {
         observer.disconnect();
         window.removeEventListener("message", handleMessage);
         if (!booked) {
-          trackEvent("calendly_popup_abandoned", { event_category: "engagement" });
+          trackEvent("calendly_popup_abandoned", {
+            event_category: "engagement",
+          });
           setShowAbandonModal(true);
         }
       }
     });
 
     observer.observe(document.body, { childList: true, subtree: true });
-    (window as any).Calendly?.initPopupWidget({ url: "https://calendly.com/ifeobijiofor1/30min" });
+    (window as any).Calendly?.initPopupWidget({
+      url: "https://calendly.com/ifeobijiofor1/30min",
+    });
   };
 
   return (
@@ -88,21 +93,24 @@ const Hero = () => {
 
             <h1
               id="hero-heading"
-              className={`${styles.heroHeadText} lg:text-[72px] sm:text-[54px] xs:text-[46px] text-[36px]`}
+              className={`${styles.heroHeadText} text-[32px] leading-[1.12] xs:text-[42px] sm:text-[54px] sm:leading-tight lg:text-[72px] lg:leading-[88px]`}
             >
-              Every competitor
-              <br className="hidden sm:block" />
+              {/* Explicit space: when the sm+ line break is hidden, newlines in JSX
+                  can collapse so "competitor" and "is" would touch. */}
+              Every competitor <br className="hidden sm:block" />
               is <span className="text-[#915eff]">automating.</span>
               <br />
-              Your business still
-              <br className="hidden sm:block" />
+              Your business still <br className="hidden sm:block" />
               runs on gut feel.
             </h1>
             <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-              I'm Ife — I build the systems that change that. AI pipelines, full SaaS,
-              revenue recovery tools. My last system contributed to{" "}
-              <span className="text-white font-semibold">$2M+ in recovered receivables.</span>{" "}
-              I work like I have a stake in the outcome, because I treat every business I touch like it's my own.
+              I'm Ife — I build the systems that change that. AI pipelines, full
+              SaaS, revenue recovery tools. My last system contributed to{" "}
+              <span className="text-white font-semibold">
+                $2M+ in recovered receivables.
+              </span>{" "}
+              I work like I have a stake in the outcome, because I treat every
+              business I touch like it's my own.
             </p>
             <p className="mt-3 text-[13px] text-[#aaa6c3] font-medium">
               Not another remote dev who goes quiet after onboarding.
@@ -115,10 +123,15 @@ const Hero = () => {
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 bg-[#915eff] hover:bg-[#7c3aed] text-white text-[14px] font-semibold px-5 py-2.5 rounded-lg transition-colors duration-200"
               >
-                <img src={download} alt="download" className="w-4 h-4 object-contain invert" />
+                <img
+                  src={download}
+                  alt="download"
+                  className="w-4 h-4 object-contain invert"
+                />
                 Download CV
               </a>
               <button
+                type="button"
                 onClick={handleBookCall}
                 className="flex items-center gap-2 bg-white text-[#915eff] hover:bg-[#f3f0ff] text-[14px] font-semibold px-5 py-2.5 rounded-lg transition-colors duration-200"
               >
@@ -153,11 +166,19 @@ const Hero = () => {
                 <ComputersCanvas />
               </Suspense>
               <div className="pointer-events-none absolute inset-x-0 bottom-5 flex justify-center">
-                <a href="#about" className="pointer-events-auto" aria-label="Scroll to About">
+                <a
+                  href="#about"
+                  className="pointer-events-auto"
+                  aria-label="Scroll to About"
+                >
                   <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
                     <motion.div
                       animate={{ y: [0, 24, 0] }}
-                      transition={{ duration: 1.5, repeat: Infinity, repeatType: "loop" }}
+                      transition={{
+                        duration: 1.5,
+                        repeat: Infinity,
+                        repeatType: "loop",
+                      }}
                       className="w-3 h-3 rounded-full bg-secondary mb-1"
                     />
                   </div>
