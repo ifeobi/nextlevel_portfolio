@@ -15,7 +15,15 @@ const ChatWidget = () => {
   const { messages, streaming, isStreaming, error, send, stop, onActions } = useIfexChat();
 
   const scrollRef = useRef<HTMLDivElement>(null);
-  const inputRef = useRef<HTMLInputElement>(null);
+  const inputRef = useRef<HTMLTextAreaElement>(null);
+
+  const INPUT_MAX_HEIGHT = 140;
+  const autoGrow = () => {
+    const el = inputRef.current;
+    if (!el) return;
+    el.style.height = "auto";
+    el.style.height = `${Math.min(el.scrollHeight, INPUT_MAX_HEIGHT)}px`;
+  };
   const wasStreamingRef = useRef(false);
   const openRef = useRef(open);
 
@@ -90,17 +98,33 @@ const ChatWidget = () => {
     });
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
+  const submit = async () => {
     const text = input.trim();
-    if (!text) return;
+    if (!text || isStreaming) return;
     setInput("");
+    // Reset textarea height after clearing.
+    requestAnimationFrame(() => {
+      if (inputRef.current) inputRef.current.style.height = "auto";
+    });
     trackEvent("ifex_message_sent", {
       event_category: "engagement",
       turn_index: messages.filter((m) => m.role === "user").length + 1,
       message_length_bucket: lengthBucket(text),
     });
     await send(text);
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    await submit();
+  };
+
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
+    // Enter submits; Shift+Enter inserts a newline (ChatGPT/Claude convention).
+    if (e.key === "Enter" && !e.shiftKey) {
+      e.preventDefault();
+      void submit();
+    }
   };
 
   // "Thinking" state: user sent a turn, stream is live, but no tokens yet.
@@ -201,20 +225,26 @@ const ChatWidget = () => {
             {/* Input */}
             <form
               onSubmit={handleSubmit}
-              className="p-3 flex gap-2"
+              className="p-3 flex gap-2 items-end"
               style={{ borderTop: "1px solid #1a1a4a" }}
             >
-              <input
+              <textarea
                 ref={inputRef}
-                type="text"
                 value={input}
-                onChange={(e) => setInput(e.target.value)}
-                placeholder="Ask me anything..."
+                rows={1}
+                onChange={(e) => {
+                  setInput(e.target.value);
+                  autoGrow();
+                }}
+                onKeyDown={handleKeyDown}
+                placeholder="Ask me anything... (Shift+Enter for newline)"
                 disabled={isStreaming}
-                className="flex-1 px-3 py-2 text-[13px] text-white rounded outline-none"
+                className="flex-1 px-3 py-2 text-[13px] text-white rounded outline-none resize-none leading-relaxed"
                 style={{
                   backgroundColor: "#050816",
                   border: "1px solid #2a2a6a",
+                  maxHeight: `${INPUT_MAX_HEIGHT}px`,
+                  overflowY: "auto",
                 }}
               />
               {isStreaming ? (
