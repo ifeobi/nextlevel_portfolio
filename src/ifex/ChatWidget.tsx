@@ -135,7 +135,7 @@ const ChatWidget = () => {
       {/* Floating trigger — pill with emoji + label */}
       <button
         type="button"
-        aria-label={open ? "Close Ifex chat" : "Chat with Ifex"}
+        aria-label={open ? "Close Ifex chat" : "Ask Ifex AI"}
         onClick={handleToggle}
         className="fixed bottom-5 right-5 z-[9998] flex items-center gap-2 px-4 py-3 rounded-full shadow-lg transition-transform hover:scale-105"
         style={{
@@ -148,7 +148,7 @@ const ChatWidget = () => {
           {open ? "×" : "😎"}
         </span>
         <span className="text-[13px] font-medium">
-          {open ? "Close" : "Chat with Ifex"}
+          {open ? "Close" : "Ask Ifex · AI"}
         </span>
         {hasUnread && !open && (
           <span
