@@ -231,13 +231,13 @@ const ChatWidget = () => {
               <textarea
                 ref={inputRef}
                 value={input}
-                rows={1}
+                rows={2}
                 onChange={(e) => {
                   setInput(e.target.value);
                   autoGrow();
                 }}
                 onKeyDown={handleKeyDown}
-                placeholder="Ask me anything... (Shift+Enter for newline)"
+                placeholder="Message Ifex — Shift+Enter for newline"
                 disabled={isStreaming}
                 className="flex-1 px-3 py-2 text-[13px] text-white rounded outline-none resize-none leading-relaxed"
                 style={{
