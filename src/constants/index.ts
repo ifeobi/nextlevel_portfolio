@@ -171,7 +171,8 @@ const projects: Project[] = [
       { name: "Claude API", color: "green-text-gradient" },
       { name: "PostgreSQL", color: "pink-text-gradient" },
     ],
-    image: "https://ik.imagekit.io/sco75u7ale/Screenshot%202026-04-14%20004507.png",
+    image:
+      "https://ik.imagekit.io/sco75u7ale/Screenshot%202026-04-14%20004507.png",
     source_code_link: "#",
     live_site: "#",
     isPrivate: true,
@@ -198,7 +199,8 @@ const projects: Project[] = [
       { name: "NestJS", color: "blue-text-gradient" },
       { name: "PostgreSQL", color: "green-text-gradient" },
     ],
-    image: "https://ik.imagekit.io/Joshua/tsh-living/listings/the-meridian-house/hero/4ed17ae547f2b25beb43e2af545405f4cefd16616d092a3582ab736fd2ffc17b.jpg",
+    image:
+      "https://ik.imagekit.io/Joshua/tsh-living/listings/the-meridian-house/hero/4ed17ae547f2b25beb43e2af545405f4cefd16616d092a3582ab736fd2ffc17b.jpg",
     source_code_link: "#",
     live_site: "https://tshliving-fetest.vercel.app",
   },
@@ -212,9 +214,10 @@ const projects: Project[] = [
       { name: "Fish Audio", color: "green-text-gradient" },
       { name: "PostgreSQL", color: "pink-text-gradient" },
     ],
-    image: "https://ik.imagekit.io/sco75u7ale/Screenshot%202026-04-14%20005408.png",
+    image:
+      "https://ik.imagekit.io/sco75u7ale/Screenshot%202026-04-14%20005408.png",
     source_code_link: "#",
-    live_site: "https://munai-fetest.vercel.app",
+    live_site: "https://munai.dev",
   },
 ];
 

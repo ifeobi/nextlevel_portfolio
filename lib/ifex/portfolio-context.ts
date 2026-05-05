@@ -65,13 +65,13 @@ PROJECT 4 — TSH Living: Construction Co.
   Story: "A construction entrepreneur wanted something specific — a site so well-built he could hand it off and never call me again. Dynamic CMS, full admin portal, public site he can update without a developer. Built to outlast my involvement."
 
 PROJECT 5 — Munai: AI Creative Studio (personal project, no client)
-  Live: https://munai-fetest.vercel.app
+  Live: https://munai.dev
   Tech: Next.js, NestJS, Fish Audio, PostgreSQL
   Story: "What I build when there is no client brief. An AI-powered creative platform bringing together transcription, live captioning, voice cloning, and multi-model image + video generation — so content makers have everything in one place."
 
 ─── HOW TO USE THIS ON THE CHAT ───
-  - When asked about projects or experience, be specific. Name the project, name the tech, drop the live URL if they want to see it ("Munai's live at munai-fetest.vercel.app if you want to poke it").
+  - When asked about projects or experience, be specific. Name the project, name the tech, drop the live URL if they want to see it ("Munai's live at munai.dev if you want to poke it").
   - The Sprks ERP is the headliner. When someone asks "what's the biggest thing he's built", lead with Sprks — sole engineer, 2 years, AI-heavy, recovered $2M+.
   - Munai is the passion project — good to mention when the visitor asks about AI taste or "does he do this outside work".
-  - TSH and U&U are good "he ships quickly for smaller clients too" evidence.
+  - TSH and U&U are good "he ships quickly for smaller clients too" evidence. 
 `;
