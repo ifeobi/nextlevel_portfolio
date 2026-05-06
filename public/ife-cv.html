@@ -102,20 +102,16 @@
     }
 
     /* ── SKILLS ── */
-    .skills-grid {
-      display: grid;
-      grid-template-columns: 110px 1fr;
-      gap: 5px 14px;
-    }
-    .skill-label {
-      font-weight: 600;
-      font-size: 9.5pt;
-      color: var(--ink);
-      padding-top: 1px;
-    }
-    .skill-value {
+    .skills-list p {
       font-size: 9.5pt;
       color: var(--muted);
+      margin-bottom: 4px;
+      line-height: 1.55;
+    }
+    .skills-list p strong {
+      color: var(--ink);
+      font-weight: 600;
+      margin-right: 4px;
     }
 
     /* ── EXPERIENCE ── */
@@ -221,10 +217,10 @@
     <div class="contact-row">
       <span><a href="mailto:ifeobijiofor1@gmail.com">ifeobijiofor1@gmail.com</a></span>
       <span><a href="https://wa.me/2347088366937">+234 708 836 6937</a></span>
-      <span>Abuja, Nigeria &mdash; Remote</span>
-      <span><a href="https://www.linkedin.com/in/ifechukwu-obijiofor-761040109/" target="_blank">linkedin.com/in/ifechukwu-obijiofor-761040109</a></span>
-      <span><a href="https://github.com/ifeobi" target="_blank">github.com/ifeobi</a></span>
-      <span><a href="https://ifesportfolio.vercel.app" target="_blank">ifesportfolio.vercel.app</a></span>
+      <span>Abuja, Nigeria · Open to Remote</span>
+      <span><a href="https://www.linkedin.com/in/ifechukwu-obijiofor-761040109/" target="_blank">https://linkedin.com/in/ifechukwu-obijiofor-761040109</a></span>
+      <span><a href="https://github.com/ifeobi" target="_blank">https://github.com/ifeobi</a></span>
+      <span><a href="https://ifesportfolio.vercel.app" target="_blank">https://ifesportfolio.vercel.app</a></span>
     </div>
   </div>
 
@@ -237,7 +233,7 @@
       Former practising lawyer turned senior fullstack engineer with 5+ years of professional engineering experience (2022&ndash;present).
       Specialises in full-stack TypeScript SaaS architecture, backend system design, and enterprise AI integration.
       Currently the sole engineer at <strong>Biggerocks BV</strong> (Antwerp, Belgium), where I architected and maintain
-      <strong>Sprks</strong> &mdash; a production ERP for the diamond trading and atelier jewellery industry, featuring a
+      <strong>Sprks</strong> &mdash; a production ERP for the diamond trading and atelier jewellery industry, featuring
       an internal Copilot (powered by the Claude API) with 38+ tools and an AI document import pipeline.
       Legal training informs a precision-first approach to system design, documentation, and technical communication
       that sets my engineering work apart.
@@ -247,27 +243,17 @@
   <!-- SKILLS -->
   <section>
     <div class="section-title">Technical Skills</div>
-    <div class="skills-grid">
-      <span class="skill-label">Languages</span>
-      <span class="skill-value">TypeScript, JavaScript</span>
-
-      <span class="skill-label">Frontend</span>
-      <span class="skill-value">React.js, Next.js, Redux Toolkit, MUI, Tailwind CSS, Framer Motion, Three.js</span>
-
-      <span class="skill-label">Backend</span>
-      <span class="skill-value">NestJS, Node.js, Prisma ORM, REST APIs, WebSockets, BullMQ</span>
-
-      <span class="skill-label">Databases</span>
-      <span class="skill-value">PostgreSQL, MongoDB</span>
-
-      <span class="skill-label">Cloud &amp; DevOps</span>
-      <span class="skill-value">AWS (Lightsail, S3), Vercel, Docker, Git / GitHub</span>
-
-      <span class="skill-label">AI &amp; LLM</span>
-      <span class="skill-value">Claude (Anthropic SDK), OpenAI (GPT-4o Vision, Responses API), tool-use patterns, streaming SSE</span>
-
-      <span class="skill-label">Tools</span>
-      <span class="skill-value">Figma, Postman, Shopify, EmailJS</span>
+    <div class="skills-list">
+      <p><strong>Languages:</strong> TypeScript, JavaScript, SQL</p>
+      <p><strong>Frontend:</strong> React.js, Next.js, Redux Toolkit, MUI (Material UI), Tailwind CSS, Framer Motion, Three.js</p>
+      <p><strong>Backend:</strong> NestJS, Node.js, Prisma ORM, REST APIs, WebSockets, BullMQ, Redis</p>
+      <p><strong>Databases:</strong> PostgreSQL, MongoDB</p>
+      <p><strong>Auth &amp; Security:</strong> JWT, OAuth, RBAC (Role-Based Access Control)</p>
+      <p><strong>Cloud &amp; DevOps:</strong> AWS (Lightsail, S3), Vercel, Docker, Git, GitHub, CI/CD pipelines</p>
+      <p><strong>AI &amp; LLM:</strong> Claude (Anthropic SDK), OpenAI (GPT-4o Vision, Responses API), tool-use patterns, streaming SSE (Server-Sent Events), retrieval-augmented generation</p>
+      <p><strong>Testing &amp; QA:</strong> Jest, Postman API testing, manual QA, regression testing</p>
+      <p><strong>Methodology:</strong> Agile, Kanban, code review, technical documentation</p>
+      <p><strong>Tools:</strong> Figma, Postman, Shopify, EmailJS</p>
     </div>
   </section>
 
@@ -320,7 +306,7 @@
 
     <div class="job">
       <div class="job-header">
-        <span class="job-title">Shopify Developer</span>
+        <span class="job-title">Shopify Developer (Contract, concurrent)</span>
         <span class="job-date">June 2023 &ndash; Dec 2023</span>
       </div>
       <div class="job-company"><a href="https://zamandzom.com" target="_blank">Zam&amp;Zom LLC</a></div>
