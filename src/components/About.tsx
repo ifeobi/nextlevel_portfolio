@@ -40,23 +40,23 @@ const About = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionSubText}`}>The story so far</p>
-        <h2 className={`${styles.sectionHeadText}`}>Overview.</h2>
+        <p className={`${styles.sectionSubText}`}>Introduction</p>
+        <h2 className={`${styles.sectionHeadText}`}>About.</h2>
       </motion.div>
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
         className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
       >
-        In 2022 I left a law career in Nigeria and taught myself to code. Someone
-        noticed my work on Twitter and handed me my first international brief — a
-        Belgian jewellery brand that had spent two years and significant budget going
-        through agencies, and ended up with a bug-ridden site that took two minutes
-        to load. I rebuilt it from scratch. That work caught the attention of someone
-        in their circle — a diamond merchant who brought me in to build his entire
-        business infrastructure. One thing led to another across Europe and the United
-        States. I am also building Munai on the side — an AI-powered creative platform that
-        brings together transcription, voice cloning, and multi-model image and video
-        generation for content makers.
+        Former practising lawyer turned senior fullstack engineer with 5+ years
+        of professional engineering experience (2022–present). I specialise in
+        full-stack TypeScript SaaS architecture, backend system design, and
+        enterprise AI integration. Currently the sole engineer at Biggerocks BV
+        in Antwerp, Belgium, where I architected and maintain Sprks — a
+        production ERP for the diamond trading and atelier jewellery industry,
+        featuring an internal Copilot (powered by the Claude API) with 38+
+        tools and an AI document import pipeline. My legal background informs
+        a precision-first approach to system design, documentation, and
+        technical communication.
       </motion.p>
 
       <div className="mt-20 flex flex-wrap gap-10">

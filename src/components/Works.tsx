@@ -11,15 +11,15 @@ const GITHUB_PROFILE = "https://github.com/ifeobi";
 
 const chapters = [
   {
-    label: "I — The Belgian Chapter",
+    label: "Belgium",
     projects: projects.slice(0, 2), // Sprks, OnlyJewels
   },
   {
-    label: "II — Crossing the Atlantic",
+    label: "United States",
     projects: projects.slice(2, 4), // U&U Designs, TSH Living
   },
   {
-    label: "III — Building His Own",
+    label: "Personal",
     projects: projects.slice(4),    // Munai
   },
 ];
@@ -157,8 +157,8 @@ const Works = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionSubText}`}>My work</p>
-        <h2 className={`${styles.sectionHeadText}`}>The story in code.</h2>
+        <p className={`${styles.sectionSubText}`}>Selected work</p>
+        <h2 className={`${styles.sectionHeadText}`}>Projects.</h2>
       </motion.div>
 
       <div className="w-full flex">
@@ -166,9 +166,8 @@ const Works = () => {
           variants={fadeIn("", "", 0.1, 1)}
           className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]"
         >
-          Every project below is live, in production, and part of a bigger story.
-          Each chapter brought a different brief, a different continent, and a
-          different problem to solve.
+          A selection of work across enterprise SaaS, e-commerce, and personal
+          projects. Each is live in production.
         </motion.p>
       </div>
 

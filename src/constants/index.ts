@@ -38,10 +38,10 @@ export const navLinks: NavLink[] = [
 ];
 
 const services: Service[] = [
-  { title: "End-to-End Product Engineering", icon: web },
-  { title: "AI Systems That Generate ROI", icon: creator },
-  { title: "Backend / API Architecture", icon: backend },
-  { title: "SaaS from Zero to Production", icon: mobile },
+  { title: "Full-Stack TypeScript", icon: web },
+  { title: "Enterprise AI Integration", icon: creator },
+  { title: "Backend & API Design", icon: backend },
+  { title: "Production SaaS Architecture", icon: mobile },
 ];
 
 const technologies: Technology[] = [
@@ -150,7 +150,7 @@ const projects: Project[] = [
   {
     name: "OnlyJewels — Luxury E-Commerce",
     description:
-      "My first international brief — found through Twitter. A Belgian jewellery brand had spent two years and significant budget going through agencies, and ended up with a bug-ridden site that took two minutes to load. I rebuilt it from scratch with modern tooling, Next.js SSR, image CDN, Stripe, and structured-data SEO. Load time: under 3 seconds.",
+      "E-commerce platform and admin portal for a Belgian luxury jewellery brand. Rebuilt from a legacy site that took ~2 minutes to load down to under 3 seconds. Next.js SSR, image CDN, Stripe checkout, headless WordPress, structured-data SEO, and a hybrid Vercel + AWS Lightsail infrastructure.",
     tags: [
       { name: "Next.js", color: "blue-text-gradient" },
       { name: "NestJS", color: "blue-text-gradient" },
@@ -164,7 +164,7 @@ const projects: Project[] = [
   {
     name: "Sprks — Diamond & Atelier ERP",
     description:
-      "That work caught the attention of someone in their circle — a diamond merchant who brought me in to build his entire business infrastructure. Sole engineer: inventory, accounting, AI document processing, multi-channel CRM, and a Claude-powered Copilot with 38+ tools. The debt recovery system contributed to $2M+ in recovered receivables.",
+      "Production ERP for the diamond trading and atelier jewellery industry. Sole engineer on a 1,100+ file TypeScript codebase: NestJS + Prisma + PostgreSQL API, Next.js + Redux + MUI frontend. Includes inventory, accounting, multi-channel CRM (WhatsApp/email/Trengo), AI document import pipeline, an internal Copilot with 38+ tools (Claude API), and a debt recovery system that contributed to $2M+ in recovered receivables.",
     tags: [
       { name: "NestJS", color: "blue-text-gradient" },
       { name: "Next.js", color: "blue-text-gradient" },
@@ -180,7 +180,7 @@ const projects: Project[] = [
   {
     name: "U&U Designs — Event Planning",
     description:
-      "Word crossed the Atlantic. A US-based event planning company needed a digital presence that matched the standard of their events — polished, fast, and built to convert. Delivered end-to-end.",
+      "Marketing site for a US-based event planning company. Next.js, TypeScript, Tailwind. Built end-to-end with a focus on performance and conversion.",
     tags: [
       { name: "Next.js", color: "blue-text-gradient" },
       { name: "TypeScript", color: "blue-text-gradient" },
@@ -193,7 +193,7 @@ const projects: Project[] = [
   {
     name: "TSH Living — Construction Co.",
     description:
-      "A construction entrepreneur wanted something specific — a site so well-built he could hand it off and never call me again. Dynamic content management, a full admin portal, and a public-facing site he can update without a developer. Built to outlast my involvement.",
+      "Public site and full admin portal for a US construction company, with dynamic content management so the team can update listings and pages without engineering involvement. Next.js, NestJS, PostgreSQL.",
     tags: [
       { name: "Next.js", color: "blue-text-gradient" },
       { name: "NestJS", color: "blue-text-gradient" },
@@ -207,7 +207,7 @@ const projects: Project[] = [
   {
     name: "Munai — AI Creative Studio",
     description:
-      "What I build when there is no client brief. An AI-powered creative platform that brings together transcription, live captioning, voice cloning, and multi-model image and video generation — so content makers have everything in one place.",
+      "Personal project. An AI-powered creative platform combining transcription, live captioning, voice cloning, and multi-model image and video generation in one workspace for content creators. Next.js, NestJS, Fish Audio, PostgreSQL.",
     tags: [
       { name: "Next.js", color: "blue-text-gradient" },
       { name: "NestJS", color: "blue-text-gradient" },

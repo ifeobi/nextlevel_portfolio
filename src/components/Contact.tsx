@@ -75,7 +75,7 @@ const Contact = () => {
         className="flex-[0.75] bg-black-100 p-8 rounded-2xl"
       >
         <p className={styles.sectionSubText}>Get in touch</p>
-        <h3 className={styles.sectionHeadText}>Let's talk.</h3>
+        <h3 className={styles.sectionHeadText}>Contact.</h3>
 
         <form
           ref={formRef as React.RefObject<HTMLFormElement>}
@@ -111,7 +111,7 @@ const Contact = () => {
               name="message"
               value={form.message}
               onChange={handleChange}
-              placeholder="What are you building, what's broken, and what does a win look like for you?"
+              placeholder="A short note about the role or project."
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium"
             />
           </label>

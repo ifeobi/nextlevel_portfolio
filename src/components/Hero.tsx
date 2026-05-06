@@ -87,7 +87,7 @@ const Hero = () => {
             <div className="flex items-center gap-2 mb-3">
               <span className="w-2 h-2 rounded-full bg-[#915eff] animate-pulse" />
               <span className="text-[#915eff] text-[13px] font-medium tracking-wide">
-                The AI age is here — is your business actually in it?
+                Senior Fullstack Engineer · TypeScript · AI Systems
               </span>
             </div>
 
@@ -95,25 +95,19 @@ const Hero = () => {
               id="hero-heading"
               className={`${styles.heroHeadText} text-[32px] leading-[1.12] xs:text-[42px] sm:text-[54px] sm:leading-tight lg:text-[72px] lg:leading-[88px]`}
             >
-              {/* Explicit space: when the sm+ line break is hidden, newlines in JSX
-                  can collapse so "competitor" and "is" would touch. */}
-              Every competitor <br className="hidden sm:block" />
-              is <span className="text-[#915eff]">automating.</span>
+              Hi, I'm <span className="text-[#915eff]">Ife.</span>
               <br />
-              Your business still <br className="hidden sm:block" />
-              runs on gut feel.
+              I build production <br className="hidden sm:block" />
+              SaaS, backend <br className="hidden sm:block" />
+              systems, and AI tools.
             </h1>
             <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-              I'm Ife — I build the systems that change that. AI pipelines, full
-              SaaS, revenue recovery tools. My last system contributed to{" "}
-              <span className="text-white font-semibold">
-                $2M+ in recovered receivables.
-              </span>{" "}
-              I work like I have a stake in the outcome, because I treat every
-              business I touch like it's my own.
-            </p>
-            <p className="mt-3 text-[13px] text-[#aaa6c3] font-medium">
-              Not another remote dev who goes quiet after onboarding.
+              Former practising lawyer turned senior fullstack engineer.
+              5+ years of professional experience across full-stack TypeScript
+              SaaS, backend system design, and enterprise AI integration.
+              Currently the sole engineer at{" "}
+              <span className="text-white font-semibold">Biggerocks BV</span>{" "}
+              in Antwerp, Belgium.
             </p>
 
             <div className="mt-6 flex flex-wrap gap-3">
@@ -141,7 +135,7 @@ const Hero = () => {
                 href="#work"
                 className="flex items-center gap-2 border border-[#915eff] text-[#915eff] hover:bg-[#915eff] hover:text-white text-[14px] font-semibold px-5 py-2.5 rounded-lg transition-colors duration-200"
               >
-                See the work →
+                View work →
               </a>
             </div>
           </div>
