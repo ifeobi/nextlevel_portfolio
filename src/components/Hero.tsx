@@ -103,11 +103,13 @@ const Hero = () => {
             </h1>
             <p className={`${styles.heroSubText} mt-2 text-white-100`}>
               Former practising lawyer turned senior fullstack engineer.
-              5+ years of professional experience across full-stack TypeScript
-              SaaS, backend system design, and enterprise AI integration.
-              Currently the sole engineer at{" "}
-              <span className="text-white font-semibold">Biggerocks BV</span>{" "}
-              in Antwerp, Belgium.
+              5+ years building enterprise-grade websites and automated
+              systems for teams across{" "}
+              <span className="text-white font-semibold">
+                Africa, Europe, and the USA
+              </span>{" "}
+              — full-stack TypeScript SaaS, backend system design, and
+              enterprise AI integration.
             </p>
 
             <div className="mt-6 flex flex-wrap gap-3">

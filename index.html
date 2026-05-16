@@ -11,7 +11,7 @@
     </title>
     <meta
       name="description"
-      content="Ife Obijiofor — Senior Fullstack Engineer specialising in TypeScript SaaS architecture, backend system design, and enterprise AI integration. Sole engineer on Sprks (production ERP) at Biggerocks BV, Antwerp. 5+ years experience. Open to remote roles."
+      content="Ife Obijiofor — Senior Fullstack Engineer with 5+ years building enterprise-grade websites and automated systems for teams across Africa, Europe, and the USA. TypeScript SaaS architecture, backend system design, and enterprise AI integration. Open to remote roles."
     />
     <meta
       name="keywords"
@@ -82,7 +82,7 @@
     />
     <meta
       property="og:description"
-      content="Senior Fullstack Engineer. Former practising lawyer. 5+ years building production TypeScript SaaS, backend systems, and enterprise AI integrations. Currently sole engineer at Biggerocks BV, Antwerp."
+      content="Senior Fullstack Engineer. Former practising lawyer. 5+ years building enterprise-grade websites and automated systems for teams across Africa, Europe, and the USA — TypeScript SaaS, backend system design, and enterprise AI integration."
     />
     <meta
       property="og:image"
@@ -99,7 +99,7 @@
     />
     <meta
       name="twitter:description"
-      content="Senior Fullstack Engineer. TypeScript, NestJS, Next.js, Claude API. Sole engineer on Sprks (production ERP) at Biggerocks BV, Antwerp. 5+ years."
+      content="Senior Fullstack Engineer. TypeScript, NestJS, Next.js, Claude API. 5+ years building enterprise systems across Africa, Europe, and the USA."
     />
     <meta
       name="twitter:image"
@@ -124,6 +124,12 @@
         if (data.event === "calendly.event_scheduled") {
           if (typeof gtag !== "undefined") {
             gtag("event", "calendly_booking_completed", {
+              event_category: "conversion",
+            });
+          }
+          if (typeof fbq !== "undefined") {
+            fbq("track", "Schedule");
+            fbq("trackCustom", "calendly_booking_completed", {
               event_category: "conversion",
             });
           }
@@ -154,6 +160,48 @@
         gtag("config", "G-5BVWJML3HE");
       }
     </script>
+
+    <!-- Meta Pixel Code — skipped on localhost -->
+    <script>
+      if (
+        location.hostname !== "localhost" &&
+        location.hostname !== "127.0.0.1"
+      ) {
+        !(function (f, b, e, v, n, t, s) {
+          if (f.fbq) return;
+          n = f.fbq = function () {
+            n.callMethod
+              ? n.callMethod.apply(n, arguments)
+              : n.queue.push(arguments);
+          };
+          if (!f._fbq) f._fbq = n;
+          n.push = n;
+          n.loaded = !0;
+          n.version = "2.0";
+          n.queue = [];
+          t = b.createElement(e);
+          t.async = !0;
+          t.src = v;
+          s = b.getElementsByTagName(e)[0];
+          s.parentNode.insertBefore(t, s);
+        })(
+          window,
+          document,
+          "script",
+          "https://connect.facebook.net/en_US/fbevents.js",
+        );
+        fbq("init", "999427089619670");
+        fbq("track", "PageView");
+      }
+    </script>
+    <noscript
+      ><img
+        height="1"
+        width="1"
+        style="display: none"
+        src="https://www.facebook.com/tr?id=999427089619670&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
   </head>
   <body>
     <div id="root"></div>
