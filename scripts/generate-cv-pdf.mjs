@@ -4,7 +4,7 @@ import { fileURLToPath } from "url";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const htmlPath = resolve(__dirname, "../public/ife-cv.html");
-const pdfPath  = resolve(__dirname, "../public/ife-cv.pdf");
+const pdfPath  = resolve(__dirname, "../public/Ife_Obijiofor_CV.pdf");
 
 const browser = await puppeteer.launch({ headless: true });
 const page    = await browser.newPage();

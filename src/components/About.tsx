@@ -47,7 +47,7 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
       >
-        Former practising lawyer turned senior fullstack engineer with 5+ years
+        Former practising lawyer turned senior fullstack engineer with 4+ years
         of professional engineering experience (2022–present). I specialise in
         full-stack TypeScript SaaS architecture, backend system design, and
         enterprise AI integration. Currently the sole engineer at Biggerocks BV

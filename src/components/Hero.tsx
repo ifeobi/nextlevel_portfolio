@@ -103,7 +103,7 @@ const Hero = () => {
             </h1>
             <p className={`${styles.heroSubText} mt-2 text-white-100`}>
               Former practising lawyer turned senior fullstack engineer.
-              5+ years building enterprise-grade websites and automated
+              4+ years building enterprise-grade websites and automated
               systems for teams across{" "}
               <span className="text-white font-semibold">
                 Africa, Europe, and the USA
@@ -114,7 +114,7 @@ const Hero = () => {
 
             <div className="mt-6 flex flex-wrap gap-3">
               <a
-                href="/ife-cv.pdf"
+                href="/Ife_Obijiofor_CV.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 bg-[#915eff] hover:bg-[#7c3aed] text-white text-[14px] font-semibold px-5 py-2.5 rounded-lg transition-colors duration-200"
