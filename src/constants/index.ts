@@ -33,6 +33,7 @@ import {
 
 export const navLinks: NavLink[] = [
   { id: "about", title: "About" },
+  { id: "experience", title: "Experience" },
   { id: "work", title: "Work" },
   { id: "contact", title: "Contact" },
 ];
@@ -62,12 +63,25 @@ const technologies: Technology[] = [
 
 const experiences: Experience[] = [
   {
+    title: "Build and Architecture Lead (Contract)",
+    company_name: "CoRent Platform",
+    company_url: "https://corent.ai",
+    icon: "/images/corent-project.svg",
+    iconBg: "#111a2f",
+    date: "Aug 2026 - Present",
+    points: [
+      "Lead architecture, backend, payments, and release work for a Virginia-based room-rental marketplace, working remotely from Nigeria.",
+      "Reworked the Stripe Connect payment flow in test mode to separate rent and deposits, record platform and owner shares, gate owner payouts on funds availability, and handle refunds and disputes.",
+      "Built onboarding and payout-readiness checks, Docker-based CI/CD for staging, and safeguards for Redis failures, backup, and recovery.",
+    ],
+  },
+  {
     title: "Senior Fullstack Engineer",
     company_name: "Biggerocks BV — Antwerp, Belgium",
     company_url: "https://sprks.net",
     icon: biggerocks,
     iconBg: "#1a1a2e",
-    date: "Feb 2024 - Present",
+    date: "Feb 2024 - Oct 2026",
     points: [
       "Sole engineer on a full TypeScript codebase — NestJS + Prisma + PostgreSQL API and Next.js + Redux + MUI frontend — 1,100+ files architected and shipped end-to-end for a production enterprise SaaS serving a Belgian diamond trading and atelier jewellery business.",
       "Designed an automated interest and debt recovery system — calculated accrued interest on overdue client balances, dispatched proactive payment warnings, and generated per-contact accounting reports — directly contributing to over $2M in recovered receivables.",
@@ -176,6 +190,20 @@ const projects: Project[] = [
     source_code_link: "#",
     live_site: "#",
     isPrivate: true,
+  },
+  {
+    name: "CoRent | Room-Rental Marketplace",
+    description:
+      "Virginia-based platform for room listings, applications, bookings, and payments. As contract Build and Architecture Lead, I led backend and payment work covering Stripe Connect onboarding, rent and deposit accounting, gated owner payouts, and refund and dispute handling. The payment overhaul was verified in Stripe test mode; live-money rollout required separate approval and reconciliation.",
+    tags: [
+      { name: "Node.js", color: "blue-text-gradient" },
+      { name: "Stripe Connect", color: "pink-text-gradient" },
+      { name: "PostgreSQL", color: "green-text-gradient" },
+      { name: "Docker", color: "blue-text-gradient" },
+    ],
+    image: "/images/corent-project.svg",
+    source_code_link: "#",
+    live_site: "https://corent.ai",
   },
   {
     name: "U&U Designs — Event Planning",

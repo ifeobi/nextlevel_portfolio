@@ -16,11 +16,11 @@ const chapters = [
   },
   {
     label: "United States",
-    projects: projects.slice(2, 4), // U&U Designs, TSH Living
+    projects: projects.slice(2, 5), // CoRent, U&U Designs, TSH Living
   },
   {
     label: "Personal",
-    projects: projects.slice(4),    // Munai
+    projects: projects.slice(5),    // Munai
   },
 ];
 
@@ -166,8 +166,9 @@ const Works = () => {
           variants={fadeIn("", "", 0.1, 1)}
           className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]"
         >
-          A selection of work across enterprise SaaS, e-commerce, and personal
-          projects. Each is live in production.
+          A selection of work across enterprise SaaS, marketplaces,
+          e-commerce, and personal projects. Individual features and payment
+          flows are described according to their verified rollout stage.
         </motion.p>
       </div>
 

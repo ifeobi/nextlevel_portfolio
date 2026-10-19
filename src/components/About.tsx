@@ -48,15 +48,15 @@ const About = () => {
         className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
       >
         Former practising lawyer turned senior fullstack engineer with 5 years
-        of professional engineering experience (2022–present). I specialise in
-        full-stack TypeScript SaaS architecture, backend system design, and
-        enterprise AI integration. Currently the sole engineer at Biggerocks BV
-        in Antwerp, Belgium, where I architected and maintain Sprks — a
-        production ERP for the diamond trading and atelier jewellery industry,
-        featuring an internal Copilot (powered by the Claude API) with 38+
-        tools and an AI document import pipeline. My legal background informs
-        a precision-first approach to system design, documentation, and
-        technical communication.
+        of professional engineering experience, starting in January 2022. I
+        specialise in full-stack TypeScript SaaS architecture, backend systems,
+        payments, and enterprise AI integration. I currently lead architecture
+        and payment work for CoRent, a US room-rental marketplace. At
+        BiggerRocks BV from February 2024 to October 2026, I architected
+        Sprks, a production ERP for the diamond trading and atelier jewellery
+        industry with an AI document pipeline and a 38+ tool copilot. My legal
+        background informs a precision-first approach to system design,
+        documentation, and technical communication.
       </motion.p>
 
       <div className="mt-20 flex flex-wrap gap-10">

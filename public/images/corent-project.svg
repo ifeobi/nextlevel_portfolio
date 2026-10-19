@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">CoRent room-rental marketplace project</title>
+  <desc id="desc">A simple illustration of connected rooms and payments.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0d1830"/>
+      <stop offset="1" stop-color="#293f63"/>
+    </linearGradient>
+    <linearGradient id="building" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#8de3d3"/>
+      <stop offset="1" stop-color="#4e9ec1"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" rx="28" fill="url(#background)"/>
+  <circle cx="960" cy="120" r="190" fill="#8de3d3" opacity=".07"/>
+  <circle cx="1030" cy="480" r="260" fill="#7399ed" opacity=".07"/>
+  <rect x="110" y="154" width="342" height="322" rx="28" fill="url(#building)"/>
+  <path d="M146 278 281 176l135 102" fill="none" stroke="#0d1830" stroke-linecap="round" stroke-linejoin="round" stroke-width="27"/>
+  <rect x="161" y="292" width="75" height="75" rx="12" fill="#0d1830" opacity=".82"/>
+  <rect x="258" y="292" width="75" height="75" rx="12" fill="#0d1830" opacity=".82"/>
+  <rect x="355" y="292" width="55" height="75" rx="12" fill="#0d1830" opacity=".82"/>
+  <rect x="252" y="394" width="74" height="82" rx="12" fill="#0d1830" opacity=".82"/>
+  <text x="515" y="294" fill="#ffffff" font-family="Arial, sans-serif" font-size="92" font-weight="700">CoRent</text>
+  <text x="520" y="362" fill="#b8c8df" font-family="Arial, sans-serif" font-size="29">Room rentals, bookings, and payments</text>
+  <path d="M520 408h512" stroke="#8de3d3" stroke-width="6" stroke-linecap="round" opacity=".85"/>
+</svg>
