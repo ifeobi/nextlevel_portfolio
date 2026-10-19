@@ -103,7 +103,7 @@ const Hero = () => {
             </h1>
             <p className={`${styles.heroSubText} mt-2 text-white-100`}>
               Former practising lawyer turned senior fullstack engineer.
-              4+ years building enterprise-grade websites and automated
+              5 years building enterprise-grade websites and automated
               systems for teams across{" "}
               <span className="text-white font-semibold">
                 Africa, Europe, and the USA
